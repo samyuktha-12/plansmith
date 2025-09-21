@@ -8,6 +8,12 @@ import 'screens/booking_confirmation_screen.dart';
 import 'screens/gallery_screen.dart';
 import 'screens/creator_zone_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/user_search_screen.dart';
+import 'screens/trip_management_screen.dart';
+import 'screens/group_trip_details_screen.dart';
+import 'screens/trip_map_screen.dart';
+import 'screens/live_events_weather_screen.dart';
+import 'screens/animated_itinerary_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -212,7 +218,7 @@ class MyApp extends StatelessWidget {
           destinationName: 'Moscow',
           country: 'Russia',
           description: 'Russia is most historical destinations',
-          imageUrl: 'https://images.unsplash.com/photo-1513635269975-59663e0eb291?w=800&h=600&fit=crop',
+          imageUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
           rating: 4.9,
           price: '256',
         ),
@@ -248,15 +254,39 @@ class MyApp extends StatelessWidget {
           destinationName: 'Moscow',
           country: 'Russia',
           imageUrls: [
-            'https://images.unsplash.com/photo-1513635269975-59663e0eb291?w=800&h=600&fit=crop',
+            'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
             'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=600&fit=crop',
             'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-            'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+            'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
             'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
           ],
         ),
         '/creator': (context) => const CreatorZoneScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/user-search': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+          return UserSearchScreen(
+            tripId: args['tripId'],
+            tripName: args['tripName'],
+          );
+        },
+        '/trip-management': (context) => const TripManagementScreen(),
+        '/group-trip-details': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+          return GroupTripDetailsScreen(trip: args);
+        },
+        '/trip-map': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+          return TripMapScreen(trip: args);
+        },
+        '/live-events': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+          return LiveEventsWeatherScreen(trip: args);
+        },
+        '/animated-itinerary': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+          return AnimatedItineraryScreen(trip: args);
+        },
       },
     );
   }
