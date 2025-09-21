@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/image_service.dart';
+import '../constants/app_colors.dart';
+import '../constants/app_styles.dart';
+import 'trip_preferences_form.dart';
+import 'itinerary_builder_screen.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({super.key});
@@ -262,7 +266,7 @@ class _MainHomePageState extends State<MainHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Colors.grey.shade50,
+      backgroundColor: AppColors.background,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -270,18 +274,18 @@ class _MainHomePageState extends State<MainHomePage> {
             children: [
               // Header Section
               Container(
-                padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
+                padding: const EdgeInsets.fromLTRB(AppStyles.spacing20, AppStyles.spacing16, AppStyles.spacing20, AppStyles.spacing20),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.surface,
                   borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(AppStyles.radius24),
+                    bottomRight: Radius.circular(AppStyles.radius24),
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
-                      blurRadius: 12,
-                      offset: const Offset(0, 2),
+                      color: AppColors.shadowLight,
+                      blurRadius: 16,
+                      offset: const Offset(0, 4),
                     ),
                   ],
                 ),
@@ -298,94 +302,87 @@ class _MainHomePageState extends State<MainHomePage> {
                               Row(
                                 children: [
                                   Container(
-                                    width: 26,
-                                    height: 26,
+                                    width: 32,
+                                    height: 32,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
+                                      borderRadius: BorderRadius.circular(AppStyles.radius8),
                                     ),
-                                    child: Image.asset(
-                                      'assets/images/logo.png',
-                                      fit: BoxFit.contain,
-                                      errorBuilder: (context, error, stackTrace) {
-                                        return Container(
-                                          decoration: BoxDecoration(
-                                            gradient: LinearGradient(
-                                              colors: [
-                                                const Color(0xFF0E4F55),
-                                                const Color(0xFF0E4F55).withOpacity(0.8),
-                                              ],
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(AppStyles.radius8),
+                                      child: Image.asset(
+                                        'assets/images/logo.png',
+                                        fit: BoxFit.contain,
+                                        errorBuilder: (context, error, stackTrace) {
+                                          return Container(
+                                            decoration: BoxDecoration(
+                                              gradient: AppGradients.primaryGradient,
+                                              borderRadius: BorderRadius.circular(AppStyles.radius8),
                                             ),
-                                            borderRadius: BorderRadius.circular(6),
-                                          ),
-                                          child: Icon(
-                                            Icons.travel_explore,
-                                            color: Colors.white,
-                                            size: 16,
-                                          ),
-                                        );
-                                      },
+                                            child: const Icon(
+                                              Icons.travel_explore_rounded,
+                                              color: AppColors.white,
+                                              size: 18,
+                                            ),
+                                          );
+                                        },
+                                      ),
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
+                                  const SizedBox(width: AppStyles.spacing12),
                                   Text(
                                     'PlanSmith',
-                                    style: TextStyle(
-                                      fontFamily: 'Quicksand',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: const Color(0xFF0E4F55),
-                                      letterSpacing: 0.2,
+                                    style: AppStyles.heading3.copyWith(
+                                      color: AppColors.primary,
+                                      letterSpacing: 0.5,
                                     ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 4),
+                              const SizedBox(height: AppStyles.spacing8),
                               Text(
-                                'Explore destinations you want!',
-                                style: TextStyle(
-                                  fontFamily: 'Quicksand',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.grey.shade700,
+                                'Discover amazing destinations',
+                                style: AppStyles.bodyLarge.copyWith(
+                                  color: AppColors.textSecondary,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        const SizedBox(width: AppStyles.spacing16),
                         // Menu Button
                         GestureDetector(
                           onTap: _showSnackbarMenu,
                           child: Container(
-                            width: 40,
-                            height: 40,
+                            width: 44,
+                            height: 44,
                             decoration: BoxDecoration(
-                              color: const Color(0xFF0E4F55).withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(12),
+                              color: AppColors.grey100,
+                              borderRadius: BorderRadius.circular(AppStyles.radius12),
                               border: Border.all(
-                                color: const Color(0xFF0E4F55).withOpacity(0.2),
+                                color: AppColors.border,
                                 width: 1,
                               ),
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.menu_rounded,
-                              color: const Color(0xFF0E4F55),
-                              size: 20,
+                              color: AppColors.primary,
+                              size: 22,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: AppStyles.spacing24),
                     
                     // Search Bar
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                      padding: const EdgeInsets.symmetric(horizontal: AppStyles.spacing16, vertical: AppStyles.spacing16),
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade50,
-                        borderRadius: BorderRadius.circular(12),
+                        color: AppColors.grey50,
+                        borderRadius: BorderRadius.circular(AppStyles.radius16),
                         border: Border.all(
-                          color: Colors.grey.shade200,
+                          color: AppColors.border,
                           width: 1,
                         ),
                       ),
@@ -393,46 +390,40 @@ class _MainHomePageState extends State<MainHomePage> {
                         children: [
                           Icon(
                             Icons.search_rounded,
-                            color: Colors.grey.shade600,
-                            size: 18,
+                            color: AppColors.textSecondary,
+                            size: 20,
                           ),
-                          const SizedBox(width: 12),
+                          const SizedBox(width: AppStyles.spacing12),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   'Where to?',
-                                  style: TextStyle(
-                                    fontFamily: 'Quicksand',
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey.shade700,
+                                  style: AppStyles.labelLarge.copyWith(
+                                    color: AppColors.textPrimary,
                                   ),
                                 ),
-                                const SizedBox(height: 1),
+                                const SizedBox(height: AppStyles.spacing4),
                                 Text(
                                   'Search destinations...',
-                                  style: TextStyle(
-                                    fontFamily: 'Quicksand',
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.grey.shade500,
+                                  style: AppStyles.bodySmall.copyWith(
+                                    color: AppColors.textTertiary,
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Container(
-                            padding: const EdgeInsets.all(6),
+                            padding: const EdgeInsets.all(AppStyles.spacing8),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF0E4F55),
-                              borderRadius: BorderRadius.circular(8),
+                              color: AppColors.primary,
+                              borderRadius: BorderRadius.circular(AppStyles.radius8),
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.tune_rounded,
-                              color: Colors.white,
-                              size: 16,
+                              color: AppColors.white,
+                              size: 18,
                             ),
                           ),
                         ],
@@ -442,40 +433,148 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
               
+              const SizedBox(height: AppStyles.spacing24),
+              
+              // AI Trip Planner Section
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: AppStyles.spacing24),
+                padding: const EdgeInsets.all(AppStyles.spacing20),
+                decoration: BoxDecoration(
+                  gradient: AppGradients.primaryGradient,
+                  borderRadius: BorderRadius.circular(AppStyles.radius20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primary.withOpacity(0.3),
+                      blurRadius: 12,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(AppStyles.spacing12),
+                          decoration: BoxDecoration(
+                            color: AppColors.white.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(AppStyles.radius12),
+                          ),
+                          child: const Icon(
+                            Icons.auto_awesome,
+                            color: AppColors.white,
+                            size: 24,
+                          ),
+                        ),
+                        const SizedBox(width: AppStyles.spacing16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'AI Trip Planner',
+                                style: AppStyles.heading3.copyWith(
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              Text(
+                                'Create personalized itineraries with swipe-to-add',
+                                style: AppStyles.bodyMedium.copyWith(
+                                  color: AppColors.white.withOpacity(0.9),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppStyles.spacing16),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: _startAITripPlanning,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppColors.white,
+                              foregroundColor: AppColors.primary,
+                              padding: const EdgeInsets.symmetric(
+                                vertical: AppStyles.spacing16,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(AppStyles.radius12),
+                              ),
+                              elevation: 0,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.add, size: 20),
+                                const SizedBox(width: AppStyles.spacing8),
+                                Text(
+                                  'Plan New Trip',
+                                  style: AppStyles.labelLarge.copyWith(
+                                    color: AppColors.primary,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: AppStyles.spacing12),
+                        OutlinedButton(
+                          onPressed: _viewExistingTrips,
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: AppColors.white),
+                            foregroundColor: AppColors.white,
+                            padding: const EdgeInsets.symmetric(
+                              vertical: AppStyles.spacing16,
+                              horizontal: AppStyles.spacing20,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(AppStyles.radius12),
+                            ),
+                          ),
+                          child: const Icon(Icons.history, size: 20),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              
               // Service Categories
               Padding(
-                padding: const EdgeInsets.fromLTRB(24, 24, 24, 16),
+                padding: const EdgeInsets.fromLTRB(AppStyles.spacing24, AppStyles.spacing32, AppStyles.spacing24, AppStyles.spacing24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Services',
-                      style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.grey.shade800,
+                      style: AppStyles.heading2.copyWith(
+                        color: AppColors.textPrimary,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: AppStyles.spacing20),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                      padding: const EdgeInsets.symmetric(horizontal: AppStyles.spacing4),
                       child: Row(
                         children: [
-                          const SizedBox(width: 4),
-                          _buildServiceCategory(Icons.bed_outlined, 'Hotel', const Color(0xFF0E4F55)),
-                          const SizedBox(width: 16),
-                          _buildServiceCategory(Icons.restaurant_outlined, 'Restaurant', const Color(0xFF2E7D32)),
-                          const SizedBox(width: 16),
-                          _buildServiceCategory(Icons.flight_outlined, 'Flight', const Color(0xFF1976D2)),
-                          const SizedBox(width: 16),
-                          _buildServiceCategory(Icons.directions_car_outlined, 'Rental Car', const Color(0xFFF57C00)),
-                          const SizedBox(width: 16),
-                            _buildServiceCategory(Icons.tour_rounded, 'Tours', const Color(0xFF7B1FA2)),
-                          const SizedBox(width: 16),
-                          _buildServiceCategory(Icons.beach_access_rounded, 'Beach', const Color(0xFF00BCD4)),
-                          const SizedBox(width: 20),
+                          const SizedBox(width: AppStyles.spacing4),
+                          _buildServiceCategory(Icons.bed_outlined, 'Hotel', AppColors.primary),
+                          const SizedBox(width: AppStyles.spacing16),
+                          _buildServiceCategory(Icons.restaurant_outlined, 'Restaurant', AppColors.secondary),
+                          const SizedBox(width: AppStyles.spacing16),
+                          _buildServiceCategory(Icons.flight_outlined, 'Flight', AppColors.primaryLight),
+                          const SizedBox(width: AppStyles.spacing16),
+                          _buildServiceCategory(Icons.directions_car_outlined, 'Rental Car', AppColors.secondaryLight),
+                          const SizedBox(width: AppStyles.spacing16),
+                          _buildServiceCategory(Icons.tour_rounded, 'Tours', AppColors.primary),
+                          const SizedBox(width: AppStyles.spacing16),
+                          _buildServiceCategory(Icons.beach_access_rounded, 'Beach', AppColors.secondary),
+                          const SizedBox(width: AppStyles.spacing20),
                         ],
                       ),
                     ),
@@ -725,8 +824,19 @@ class _MainHomePageState extends State<MainHomePage> {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    // Navigate to destination details
-                                    Navigator.pushNamed(context, '/destination');
+                                    // Navigate to group trip details
+                                    Navigator.pushNamed(context, '/group-trip-details', arguments: {
+                                      'id': 'jeju_trip',
+                                      'name': 'Jeju Trip',
+                                      'destination': 'Jeju Island, South Korea',
+                                      'imageUrl': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
+                                      'startDate': DateTime.now().add(const Duration(days: 7)),
+                                      'endDate': DateTime.now().add(const Duration(days: 14)),
+                                      'members': 5,
+                                      'budget': 1500.0,
+                                      'status': 'confirmed',
+                                      'isGroupTrip': true,
+                                    });
                                   },
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -745,7 +855,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Text(
-                                          'Trip detail >',
+                                          'Group Trip >',
                                           style: TextStyle(
                                             fontFamily: 'Quicksand',
                                             fontSize: 14,
@@ -892,19 +1002,12 @@ class _MainHomePageState extends State<MainHomePage> {
               width: 64,
               height: 64,
               decoration: BoxDecoration(
-                color: color.withOpacity(0.12),
-                borderRadius: BorderRadius.circular(32),
+                color: color.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(AppStyles.radius16),
                 border: Border.all(
-                  color: color.withOpacity(0.25),
-                  width: 1.5,
+                  color: color.withOpacity(0.2),
+                  width: 1,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: color.withOpacity(0.1),
-                    blurRadius: 8,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
               ),
               child: Icon(
                 icon,
@@ -912,14 +1015,11 @@ class _MainHomePageState extends State<MainHomePage> {
                 size: 24,
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: AppStyles.spacing8),
             Text(
               label,
-              style: TextStyle(
-                fontFamily: 'Quicksand',
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: Colors.grey.shade700,
+              style: AppStyles.labelMedium.copyWith(
+                color: AppColors.textSecondary,
               ),
             ),
           ],
@@ -1212,6 +1312,113 @@ class _MainHomePageState extends State<MainHomePage> {
               ),
           ],
         ),
+      ),
+    );
+  }
+
+  void _startAITripPlanning() {
+    print('Starting AI trip planning...');
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TripPreferencesForm(
+          onSubmit: (preferences) {
+            print('Received preferences in callback: $preferences');
+            // First pop the form, then navigate to itinerary builder
+            Navigator.pop(context); // Close the form
+            print('Navigating to ItineraryBuilderScreen...');
+            print('About to create ItineraryBuilderScreen with preferences: $preferences');
+            
+            // Use a small delay to ensure the form is closed before navigation
+            Future.delayed(const Duration(milliseconds: 100), () {
+              if (mounted) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      print('MaterialPageRoute builder called');
+                      return ItineraryBuilderScreen(
+                        userPreferences: preferences,
+                      );
+                    },
+                  ),
+                ).then((_) {
+                  print('Navigation to ItineraryBuilderScreen completed');
+                }).catchError((error) {
+                  print('Navigation error: $error');
+                });
+              }
+            });
+          },
+        ),
+      ),
+    );
+  }
+
+  void _viewExistingTrips() {
+    // Show existing trips or navigate to trip history
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Trip History',
+          style: AppStyles.heading3.copyWith(color: AppColors.textPrimary),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Your recent trips will appear here.',
+              style: AppStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+            ),
+            const SizedBox(height: AppStyles.spacing16),
+            Container(
+              padding: const EdgeInsets.all(AppStyles.spacing16),
+              decoration: BoxDecoration(
+                color: AppColors.grey100,
+                borderRadius: BorderRadius.circular(AppStyles.radius12),
+              ),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.travel_explore,
+                    size: 48,
+                    color: AppColors.grey400,
+                  ),
+                  const SizedBox(height: AppStyles.spacing8),
+                  Text(
+                    'No trips yet',
+                    style: AppStyles.labelLarge.copyWith(color: AppColors.textSecondary),
+                  ),
+                  Text(
+                    'Start planning your first trip!',
+                    style: AppStyles.bodySmall.copyWith(color: AppColors.textTertiary),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Close',
+              style: AppStyles.labelLarge.copyWith(color: AppColors.textSecondary),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+              _startAITripPlanning();
+            },
+            style: AppStyles.primaryButton,
+            child: Text(
+              'Plan Trip',
+              style: AppStyles.labelLarge.copyWith(color: AppColors.white),
+            ),
+          ),
+        ],
       ),
     );
   }

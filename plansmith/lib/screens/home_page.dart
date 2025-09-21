@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 import 'signin_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,10 +13,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<Offset> _slideAnimation;
+  late VideoPlayerController _videoController;
 
   @override
   void initState() {
     super.initState();
+    
+    // Initialize video controller
+    _videoController = VideoPlayerController.asset('assets/videos/intro.mp4')
+      ..initialize().then((_) {
+        setState(() {});
+        _videoController.setLooping(true);
+        _videoController.play();
+      });
+    
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 1500),
       vsync: this,
@@ -43,25 +54,37 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   void dispose() {
     _animationController.dispose();
+    _videoController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/intro.png'),
-            fit: BoxFit.cover,
-            alignment: Alignment.topLeft,
+      body: Stack(
+        children: [
+          // Video background
+          Positioned.fill(
+            child: _videoController.value.isInitialized
+                ? Transform.translate(
+                    offset: const Offset(50, 0), // Move video 20 pixels to the right
+                    child: FittedBox(
+                      fit: BoxFit.cover,
+                      child: SizedBox(
+                        width: _videoController.value.size.width,
+                        height: _videoController.value.size.height,
+                        child: VideoPlayer(_videoController),
+                      ),
+                    ),
+                  )
+                : const Center(
+                    child: CircularProgressIndicator(),
+                  ),
           ),
-        ),
-        child: SafeArea(
-          child: Column(
-            children: [
+          // Overlay content
+          SafeArea(
+            child: Column(
+              children: [
               // Animated PlanSmith text at top
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, left: 18.0),
@@ -177,6 +200,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ],
           ),
         ),
+        ],
       ),
     );
   }

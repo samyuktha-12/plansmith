@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../constants/app_colors.dart';
+import '../constants/app_styles.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -18,12 +20,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade50,
+      backgroundColor: AppColors.background,
       body: CustomScrollView(
         slivers: [
           // Profile Header
           SliverAppBar(
-            expandedHeight: 300,
+            expandedHeight: 320,
             pinned: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
@@ -48,36 +50,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color(0xFF0E4F55),
-                      Color(0xFF0E4F55),
-                    ],
-                  ),
+                  gradient: AppGradients.primaryGradient,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(AppStyles.spacing20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      const SizedBox(height: 60),
+                      const SizedBox(height: AppStyles.spacing40),
                       // Profile Avatar
                       Stack(
                         children: [
                           CircleAvatar(
-                            radius: 60,
-                            backgroundColor: Colors.white.withOpacity(0.2),
+                            radius: 50,
+                            backgroundColor: AppColors.white.withOpacity(0.2),
                             child: CircleAvatar(
-                              radius: 55,
+                              radius: 45,
                               backgroundImage: NetworkImage(userAvatar),
                               onBackgroundImageError: (exception, stackTrace) {
                                 // Handle image error
                               },
                               child: const Icon(
                                 Icons.person_rounded,
-                                color: Colors.white,
+                                color: AppColors.white,
                                 size: 40,
                               ),
                             ),
@@ -91,19 +86,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 width: 36,
                                 height: 36,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(18),
+                                  color: AppColors.white,
+                                  borderRadius: BorderRadius.circular(AppStyles.radius20),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.2),
-                                      blurRadius: 8,
-                                      offset: const Offset(0, 2),
+                                      color: AppColors.shadowMedium,
+                                      blurRadius: 12,
+                                      offset: const Offset(0, 4),
                                     ),
                                   ],
                                 ),
                                 child: const Icon(
                                   Icons.camera_alt_rounded,
-                                  color: Color(0xFF0E4F55),
+                                  color: AppColors.primary,
                                   size: 18,
                                 ),
                               ),
@@ -111,27 +106,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: AppStyles.spacing12),
                       Text(
                         userName,
-                        style: const TextStyle(
-                          fontFamily: 'Quicksand',
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
+                        style: AppStyles.heading2.copyWith(
+                          color: AppColors.white,
+                          fontSize: 22,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      const SizedBox(height: AppStyles.spacing4),
                       Text(
                         userEmail,
-                        style: TextStyle(
-                          fontFamily: 'Quicksand',
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white.withOpacity(0.9),
+                        style: AppStyles.bodyMedium.copyWith(
+                          color: AppColors.white.withOpacity(0.9),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: AppStyles.spacing20),
                       // Stats Row
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -193,21 +183,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
       children: [
         Text(
           value,
-          style: const TextStyle(
-            fontFamily: 'Quicksand',
-            fontSize: 24,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
+          style: AppStyles.heading3.copyWith(
+            color: AppColors.white,
+            fontSize: 20,
           ),
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: AppStyles.spacing4),
         Text(
           label,
-          style: TextStyle(
-            fontFamily: 'Quicksand',
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: Colors.white.withOpacity(0.9),
+          style: AppStyles.labelMedium.copyWith(
+            color: AppColors.white.withOpacity(0.9),
           ),
         ),
       ],
@@ -254,6 +239,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 'My Posts',
                 const Color(0xFF2E7D32),
                 () => _navigateToMyPosts(),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 12),
+        Row(
+          children: [
+            Expanded(
+              child: _buildQuickActionCard(
+                Icons.bookmark_rounded,
+                'Saved Trips',
+                const Color(0xFF7B1FA2),
+                () => _navigateToSavedTrips(),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: _buildQuickActionCard(
+                Icons.history_rounded,
+                'Past Trips',
+                const Color(0xFFF57C00),
+                () => _navigateToPastTrips(),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: _buildQuickActionCard(
+                Icons.group_add_rounded,
+                'Create Group',
+                const Color(0xFF00BCD4),
+                () => _createGroupTrip(),
               ),
             ),
           ],
@@ -713,13 +729,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _navigateToMyTrips() {
-    // TODO: Navigate to my trips
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('My trips functionality coming soon!'),
-        backgroundColor: Color(0xFF0E4F55),
-      ),
-    );
+    Navigator.pushNamed(context, '/trip-management');
+  }
+
+  void _navigateToSavedTrips() {
+    Navigator.pushNamed(context, '/trip-management');
+  }
+
+  void _navigateToPastTrips() {
+    Navigator.pushNamed(context, '/trip-management');
+  }
+
+  void _createGroupTrip() {
+    Navigator.pushNamed(context, '/trip-management');
   }
 
   void _navigateToMyPosts() {
