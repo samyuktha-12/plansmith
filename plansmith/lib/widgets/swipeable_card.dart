@@ -26,16 +26,18 @@ class _SwipeableCardState extends State<SwipeableCard>
   late Animation<double> _animation;
   late Animation<double> _rotationAnimation;
   late Animation<double> _scaleAnimation;
+  late Animation<double> _opacityAnimation;
 
   Offset _dragStart = Offset.zero;
   double _dragExtent = 0;
   bool _isDragging = false;
+  bool _showFeedback = false;
 
   @override
   void initState() {
     super.initState();
     _animationController = AnimationController(
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 400),
       vsync: this,
     );
 
@@ -44,7 +46,7 @@ class _SwipeableCardState extends State<SwipeableCard>
       end: 0,
     ).animate(CurvedAnimation(
       parent: _animationController,
-      curve: Curves.easeOut,
+      curve: Curves.easeOutCubic,
     ));
 
     _rotationAnimation = Tween<double>(
@@ -52,15 +54,23 @@ class _SwipeableCardState extends State<SwipeableCard>
       end: 0,
     ).animate(CurvedAnimation(
       parent: _animationController,
-      curve: Curves.easeOut,
+      curve: Curves.easeOutCubic,
     ));
 
     _scaleAnimation = Tween<double>(
       begin: 1.0,
-      end: 0.9,
+      end: 0.95,
     ).animate(CurvedAnimation(
       parent: _animationController,
-      curve: Curves.easeOut,
+      curve: Curves.easeOutCubic,
+    ));
+
+    _opacityAnimation = Tween<double>(
+      begin: 1.0,
+      end: 0.0,
+    ).animate(CurvedAnimation(
+      parent: _animationController,
+      curve: Curves.easeOutCubic,
     ));
   }
 
@@ -85,6 +95,7 @@ class _SwipeableCardState extends State<SwipeableCard>
 
     setState(() {
       _dragExtent = details.localPosition.dx - _dragStart.dx;
+      _showFeedback = dragPercentage.abs() > 0.1; // Show feedback earlier
     });
   }
 
@@ -95,7 +106,11 @@ class _SwipeableCardState extends State<SwipeableCard>
     final screenWidth = MediaQuery.of(context).size.width;
     final dragPercentage = _dragExtent / screenWidth;
 
-    if (dragPercentage.abs() > 0.3) {
+    setState(() {
+      _showFeedback = false;
+    });
+
+    if (dragPercentage.abs() > 0.25) { // Lower threshold for easier swiping
       // Swipe threshold reached
       if (dragPercentage > 0) {
         // Swipe right
@@ -180,24 +195,94 @@ class _SwipeableCardState extends State<SwipeableCard>
         final translateX = _isDragging ? _dragExtent : _animation.value;
         final rotation = _isDragging ? _dragExtent / 100 : _rotationAnimation.value;
         final scale = _isDragging ? 1.0 : _scaleAnimation.value;
+        final opacity = _isDragging ? 1.0 : _opacityAnimation.value;
 
-        return Transform.translate(
-          offset: Offset(translateX, 0),
-          child: Transform.rotate(
-            angle: rotation,
-            child: Transform.scale(
-              scale: scale,
-              child: GestureDetector(
-                onTap: widget.onTap,
-                onPanStart: _onPanStart,
-                onPanUpdate: _onPanUpdate,
-                onPanEnd: _onPanEnd,
-                child: widget.child,
+        return Stack(
+          children: [
+            // Visual feedback overlay
+            if (_showFeedback && _isDragging)
+              Positioned.fill(
+                child: _buildFeedbackOverlay(),
+              ),
+            
+            // Main card
+            Transform.translate(
+              offset: Offset(translateX, 0),
+              child: Transform.rotate(
+                angle: rotation,
+                child: Transform.scale(
+                  scale: scale,
+                  child: Opacity(
+                    opacity: opacity,
+                    child: GestureDetector(
+                      onTap: widget.onTap,
+                      onPanStart: _onPanStart,
+                      onPanUpdate: _onPanUpdate,
+                      onPanEnd: _onPanEnd,
+                      child: widget.child,
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
+          ],
         );
       },
+    );
+  }
+
+  Widget _buildFeedbackOverlay() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final dragPercentage = _dragExtent / screenWidth;
+    final isSwipeRight = dragPercentage > 0;
+    
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        gradient: LinearGradient(
+          begin: isSwipeRight ? Alignment.centerLeft : Alignment.centerRight,
+          end: isSwipeRight ? Alignment.centerRight : Alignment.centerLeft,
+          colors: isSwipeRight 
+            ? [AppColors.success.withOpacity(0.1), Colors.transparent]
+            : [Colors.transparent, AppColors.error.withOpacity(0.1)],
+        ),
+      ),
+      child: Center(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          decoration: BoxDecoration(
+            color: isSwipeRight ? AppColors.success : AppColors.error,
+            borderRadius: BorderRadius.circular(25),
+            boxShadow: [
+              BoxShadow(
+                color: (isSwipeRight ? AppColors.success : AppColors.error).withOpacity(0.3),
+                blurRadius: 20,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                isSwipeRight ? Icons.favorite : Icons.close,
+                color: AppColors.white,
+                size: 24,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                isSwipeRight ? 'ADD' : 'PASS',
+                style: const TextStyle(
+                  color: AppColors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  letterSpacing: 1.2,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -218,17 +303,36 @@ class ActivityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: AppStyles.spacing16),
-      decoration: AppStyles.cardDecoration,
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.shadowLight,
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+          BoxShadow(
+            color: AppColors.primary.withOpacity(0.1),
+            blurRadius: 30,
+            offset: const Offset(0, 4),
+          ),
+        ],
+        border: Border.all(
+          color: AppColors.borderLight,
+          width: 1,
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Image
+          // Image with gradient overlay
           Container(
-            height: 200,
+            height: 220,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(AppStyles.radius16),
-                topRight: Radius.circular(AppStyles.radius16),
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
               ),
               image: activity['image_url'] != null
                   ? DecorationImage(
@@ -238,130 +342,218 @@ class ActivityCard extends StatelessWidget {
                   : null,
               color: activity['image_url'] == null ? AppColors.grey200 : null,
             ),
-            child: activity['image_url'] == null
-                ? const Center(
+            child: Stack(
+              children: [
+                // Gradient overlay for better text readability
+                if (activity['image_url'] != null)
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.transparent,
+                          Colors.black.withOpacity(0.3),
+                        ],
+                      ),
+                    ),
+                  ),
+                
+                // Category badge
+                Positioned(
+                  top: 16,
+                  left: 16,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.primary.withOpacity(0.3),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Text(
+                      activity['category'] ?? 'Activity',
+                      style: const TextStyle(
+                        color: AppColors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                  ),
+                ),
+                
+                // Rating badge
+                if (activity['rating'] != null)
+                  Positioned(
+                    top: 16,
+                    right: 16,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: AppColors.white.withOpacity(0.9),
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 4,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            color: AppColors.warning,
+                            size: 14,
+                          ),
+                          const SizedBox(width: 2),
+                          Text(
+                            activity['rating'].toString(),
+                            style: const TextStyle(
+                              color: AppColors.textPrimary,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                
+                // Fallback icon
+                if (activity['image_url'] == null)
+                  const Center(
                     child: Icon(
-                      Icons.image,
+                      Icons.explore,
                       size: 50,
                       color: AppColors.grey500,
                     ),
-                  )
-                : null,
+                  ),
+              ],
+            ),
           ),
           
           // Content
           Padding(
-            padding: const EdgeInsets.all(AppStyles.spacing16),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Title and Rating
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        activity['name'] ?? 'Activity',
-                        style: AppStyles.heading3.copyWith(
-                          color: AppColors.textPrimary,
-                        ),
-                      ),
-                    ),
-                    if (activity['rating'] != null) ...[
-                      const Icon(
-                        Icons.star,
-                        color: AppColors.warning,
-                        size: 16,
-                      ),
-                      const SizedBox(width: 4),
-                      Text(
-                        activity['rating'].toString(),
-                        style: AppStyles.bodyMedium.copyWith(
-                          color: AppColors.textSecondary,
-                        ),
-                      ),
-                    ],
-                  ],
+                // Title
+                Text(
+                  activity['name'] ?? 'Activity',
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.textPrimary,
+                    letterSpacing: 0.3,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 
-                const SizedBox(height: AppStyles.spacing8),
-                
-                // Category
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppStyles.spacing8,
-                    vertical: AppStyles.spacing4,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(AppStyles.radius8),
-                  ),
-                  child: Text(
-                    activity['category'] ?? 'Activity',
-                    style: AppStyles.caption.copyWith(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                
-                const SizedBox(height: AppStyles.spacing12),
+                const SizedBox(height: 12),
                 
                 // Description
                 Text(
                   activity['description'] ?? 'No description available',
-                  style: AppStyles.bodyMedium.copyWith(
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
                     color: AppColors.textSecondary,
+                    height: 1.4,
                   ),
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                 ),
                 
-                const SizedBox(height: AppStyles.spacing16),
+                const SizedBox(height: 20),
                 
                 // Details Row
-                Row(
-                  children: [
-                    // Duration
-                    Expanded(
-                      child: _buildDetailItem(
-                        Icons.access_time,
-                        '${activity['duration_hours'] ?? 2} hrs',
-                        AppColors.info,
-                      ),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: AppColors.grey50,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: AppColors.borderLight,
+                      width: 1,
                     ),
-                    // Cost
-                    Expanded(
-                      child: _buildDetailItem(
-                        Icons.currency_rupee,
-                        '₹${activity['cost_per_person'] ?? 500}',
-                        AppColors.success,
-                      ),
-                    ),
-                  ],
-                ),
-                
-                const SizedBox(height: AppStyles.spacing16),
-                
-                // Location
-                if (activity['location'] != null)
-                  Row(
+                  ),
+                  child: Row(
                     children: [
-                      const Icon(
-                        Icons.location_on,
-                        size: 16,
-                        color: AppColors.textTertiary,
-                      ),
-                      const SizedBox(width: 4),
+                      // Duration
                       Expanded(
-                        child: Text(
-                          activity['location'],
-                          style: AppStyles.bodySmall.copyWith(
-                            color: AppColors.textTertiary,
-                          ),
-                          overflow: TextOverflow.ellipsis,
+                        child: _buildDetailItem(
+                          Icons.access_time,
+                          '${activity['duration_hours'] ?? 2} hrs',
+                          AppColors.info,
+                        ),
+                      ),
+                      Container(
+                        width: 1,
+                        height: 30,
+                        color: AppColors.border,
+                      ),
+                      // Cost
+                      Expanded(
+                        child: _buildDetailItem(
+                          Icons.currency_rupee,
+                          '₹${activity['cost_per_person'] ?? 500}',
+                          AppColors.success,
                         ),
                       ),
                     ],
+                  ),
+                ),
+                
+                const SizedBox(height: 16),
+                
+                // Location
+                if (activity['location'] != null)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: AppColors.primary.withOpacity(0.1),
+                        width: 1,
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          size: 16,
+                          color: AppColors.primary,
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            activity['location'],
+                            style: const TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.primary,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
               ],
             ),
@@ -372,20 +564,21 @@ class ActivityCard extends StatelessWidget {
   }
 
   Widget _buildDetailItem(IconData icon, String text, Color color) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
+    return Column(
       children: [
         Icon(
           icon,
-          size: 16,
+          size: 20,
           color: color,
         ),
-        const SizedBox(width: 4),
+        const SizedBox(height: 4),
         Text(
           text,
-          style: AppStyles.bodySmall.copyWith(
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
             color: color,
-            fontWeight: FontWeight.w500,
+            letterSpacing: 0.2,
           ),
         ),
       ],

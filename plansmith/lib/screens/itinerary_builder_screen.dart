@@ -345,6 +345,9 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
     final item = items.first;
     _toggleItemSelection(item, title.toLowerCase());
     
+    // Show success popup
+    _showSwipeFeedback(true, item['name'] ?? 'Item', title);
+    
     // Remove the item from the list and move to next
     setState(() {
       switch (title.toLowerCase()) {
@@ -366,6 +369,11 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
 
   void _handleSwipeLeft(List<Map<String, dynamic>> items, String title) {
     if (items.isEmpty) return;
+    
+    final item = items.first;
+    
+    // Show pass popup
+    _showSwipeFeedback(false, item['name'] ?? 'Item', title);
     
     // Just remove the item without adding to selection
     setState(() {
@@ -653,6 +661,113 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
         ],
       ),
     );
+  }
+
+  void _showSwipeFeedback(bool isAdded, String itemName, String category) {
+    final color = isAdded ? AppColors.success : AppColors.error;
+    final icon = isAdded ? Icons.favorite : Icons.close;
+    final message = isAdded ? 'Added to itinerary!' : 'Passed';
+    
+    OverlayEntry overlayEntry = OverlayEntry(
+      builder: (context) => Positioned(
+        top: MediaQuery.of(context).padding.top + 100,
+        left: 20,
+        right: 20,
+        child: Material(
+          color: Colors.transparent,
+          child: TweenAnimationBuilder<double>(
+            duration: const Duration(milliseconds: 300),
+            tween: Tween(begin: 0.0, end: 1.0),
+            builder: (context, value, child) {
+              return Transform.translate(
+                offset: Offset(0, -20 * (1 - value)),
+                child: Opacity(
+                  opacity: value,
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: AppColors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: color.withOpacity(0.2),
+                        width: 1.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.08),
+                          blurRadius: 20,
+                          offset: const Offset(0, 8),
+                        ),
+                        BoxShadow(
+                          color: color.withOpacity(0.1),
+                          blurRadius: 30,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: color.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(
+                            icon,
+                            color: color,
+                            size: 24,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                message,
+                                style: TextStyle(
+                                  fontFamily: 'Quicksand',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  color: color,
+                                  letterSpacing: 0.5,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                itemName,
+                                style: TextStyle(
+                                  fontFamily: 'Quicksand',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: AppColors.textSecondary,
+                                  height: 1.4,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context).insert(overlayEntry);
+
+    // Remove the overlay after 2 seconds
+    Future.delayed(const Duration(seconds: 2), () {
+      overlayEntry.remove();
+    });
   }
 
   @override
