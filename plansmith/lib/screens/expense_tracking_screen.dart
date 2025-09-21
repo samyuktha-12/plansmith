@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class ExpenseTrackingScreen extends StatefulWidget {
   const ExpenseTrackingScreen({super.key});
@@ -11,6 +12,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
   List<Map<String, dynamic>> expenses = [];
   double totalExpenses = 0.0;
   String selectedPeriod = 'This Month';
+  List<Map<String, dynamic>> tripPhotos = [];
 
   @override
   void initState() {
@@ -74,6 +76,34 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
         'date': DateTime.now().subtract(const Duration(days: 4)),
         'icon': Icons.shopping_bag_rounded,
         'color': const Color(0xFFE91E63),
+      },
+    ];
+    
+    // Mock trip photos data
+    tripPhotos = [
+      {
+        'id': '1',
+        'imageUrl': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
+        'uploadedBy': 'Alice',
+        'date': DateTime.now().subtract(const Duration(hours: 2)),
+        'location': 'Beach Resort',
+        'likes': 12,
+      },
+      {
+        'id': '2',
+        'imageUrl': 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400',
+        'uploadedBy': 'Bob',
+        'date': DateTime.now().subtract(const Duration(hours: 5)),
+        'location': 'Mountain View',
+        'likes': 8,
+      },
+      {
+        'id': '3',
+        'imageUrl': 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400',
+        'uploadedBy': 'Charlie',
+        'date': DateTime.now().subtract(const Duration(hours: 8)),
+        'location': 'Restaurant',
+        'likes': 15,
       },
     ];
     
@@ -205,7 +235,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  '\$${totalExpenses.toStringAsFixed(0)}',
+                  '₹${totalExpenses.toStringAsFixed(0)}',
                   style: const TextStyle(
                     fontFamily: 'Quicksand',
                     fontSize: 36,
@@ -261,6 +291,11 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
               ],
             ),
           ),
+
+          const SizedBox(height: 20),
+
+          // Trip Photos Section
+          _buildTripPhotosSection(),
 
           const SizedBox(height: 20),
 
@@ -381,7 +416,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
           // Category List
           Expanded(
             flex: 3,
-            child: Column(
+            child: ListView(
               children: categoryTotals.entries.map((entry) {
                 final percentage = (entry.value / totalExpenses * 100).round();
                 final colorIndex = categoryTotals.keys.toList().indexOf(entry.key) % colors.length;
@@ -427,7 +462,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
                   ),
                 ),
                 Text(
-                  '$percentage% • \$${amount.toStringAsFixed(0)}',
+                  '$percentage% • ₹${amount.toStringAsFixed(0)}',
                   style: TextStyle(
                     fontFamily: 'Quicksand',
                     fontSize: 12,
@@ -562,7 +597,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
             ),
           ),
           Text(
-            '-\$${expense['amount'].toStringAsFixed(0)}',
+            '-₹${expense['amount'].toStringAsFixed(0)}',
             style: const TextStyle(
               fontFamily: 'Quicksand',
               fontSize: 16,
@@ -717,6 +752,224 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
           ),
         );
       },
+    );
+  }
+
+  Widget _buildTripPhotosSection() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Trip Photos',
+                style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF0E4F55),
+                ),
+              ),
+              TextButton.icon(
+                onPressed: _showAddPhotoDialog,
+                icon: const Icon(
+                  Icons.add_photo_alternate_rounded,
+                  color: Color(0xFF0E4F55),
+                  size: 18,
+                ),
+                label: const Text(
+                  'Add Photo',
+                  style: TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF0E4F55),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          SizedBox(
+            height: 120,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: tripPhotos.length,
+              itemBuilder: (context, index) {
+                final photo = tripPhotos[index];
+                return _buildPhotoCard(photo);
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPhotoCard(Map<String, dynamic> photo) {
+    return Container(
+      width: 100,
+      margin: const EdgeInsets.only(right: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      color: Colors.grey.shade200,
+                      child: const Icon(
+                        Icons.image,
+                        color: Colors.grey,
+                        size: 32,
+                      ),
+                    ),
+                    Positioned(
+                      top: 8,
+                      right: 8,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.6),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                              size: 12,
+                            ),
+                            const SizedBox(width: 2),
+                            Text(
+                              '${photo['likes']}',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            photo['uploadedBy'],
+            style: const TextStyle(
+              fontFamily: 'Quicksand',
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: Color(0xFF0E4F55),
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          Text(
+            photo['location'],
+            style: TextStyle(
+              fontFamily: 'Quicksand',
+              fontSize: 10,
+              fontWeight: FontWeight.w400,
+              color: Colors.grey.shade600,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showAddPhotoDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text(
+          'Add Photo',
+          style: TextStyle(
+            fontFamily: 'Quicksand',
+            fontWeight: FontWeight.w600,
+            color: Color(0xFF0E4F55),
+          ),
+        ),
+        content: const Text(
+          'Choose a photo to share with your travel group',
+          style: TextStyle(
+            fontFamily: 'Quicksand',
+            color: Colors.grey,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text(
+              'Cancel',
+              style: TextStyle(
+                fontFamily: 'Quicksand',
+                color: Colors.grey,
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+              // Add mock photo
+              setState(() {
+                tripPhotos.insert(0, {
+                  'id': DateTime.now().millisecondsSinceEpoch.toString(),
+                  'imageUrl': 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400',
+                  'uploadedBy': 'You',
+                  'date': DateTime.now(),
+                  'location': 'New Location',
+                  'likes': 0,
+                });
+              });
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Photo added successfully!'),
+                  backgroundColor: Color(0xFF0E4F55),
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF0E4F55),
+              foregroundColor: Colors.white,
+            ),
+            child: const Text(
+              'Add Photo',
+              style: TextStyle(
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
