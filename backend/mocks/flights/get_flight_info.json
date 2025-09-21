@@ -1,0 +1,786 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1758440248322,
+  "data": {
+    "token": "d6a1f_H4sIAAAAAAAA_y2QW2-jMBSEf03zVIwvBDeVrIoEt6VrQhZomuTFIo5D6I0s9qopv369UB1r5pszki35ZO3Z3Pr-8b2pT9Z4fw2oW9vWldVAtR_-sXOyb9u35rP2q6bz51kac4FRwVc-ukb0GvqeG3W7vdPVuQEdODK-KXm-jIQs82QlV3mySJYPE32xnukUmzR7DSqj2Cq6-eGOhSCkj7sYBmJYqdayAFASiPC-wFs-Ljv2OKdhtB3SgaWx-cr63TzrE5J9o-L51ZC0z9Pl265Yo6dd1nNSoN8mLQ9ivfi6LKF9FjEnZRzRdF2bFHIjynwuFvAyXKmVYgiAgM7QkNvKMHrzw8oyBEc8WFbizUNRjtEVhM7G7uI4xDOAAjglE6PftbJN-_lLf7OQYwip575On_HUy6_wouoVth8OrkjkTi2h09OglUREON9L-r9Vox0kRrNQOdLSPeH8KAOnjUTAjaNXmbw46yX5o_Zn-w_fbGue4AEAAA..",
+    "segments": [
+      {
+        "departureAirport": {
+          "type": "AIRPORT",
+          "code": "BOM",
+          "name": "Chhatrapati Shivaji International Airport Mumbai",
+          "city": "BOM",
+          "cityName": "Mumbai",
+          "country": "IN",
+          "countryName": "India",
+          "province": "Maharashtra"
+        },
+        "arrivalAirport": {
+          "type": "AIRPORT",
+          "code": "DEL",
+          "name": "Delhi International Airport",
+          "city": "DEL",
+          "cityName": "New Delhi",
+          "country": "IN",
+          "countryName": "India"
+        },
+        "departureTime": "2025-09-21T23:45:00",
+        "arrivalTime": "2025-09-22T02:00:00",
+        "legs": [
+          {
+            "departureTime": "2025-09-21T23:45:00",
+            "arrivalTime": "2025-09-22T02:00:00",
+            "departureAirport": {
+              "type": "AIRPORT",
+              "code": "BOM",
+              "name": "Chhatrapati Shivaji International Airport Mumbai",
+              "city": "BOM",
+              "cityName": "Mumbai",
+              "country": "IN",
+              "countryName": "India",
+              "province": "Maharashtra"
+            },
+            "arrivalAirport": {
+              "type": "AIRPORT",
+              "code": "DEL",
+              "name": "Delhi International Airport",
+              "city": "DEL",
+              "cityName": "New Delhi",
+              "country": "IN",
+              "countryName": "India"
+            },
+            "cabinClass": "ECONOMY",
+            "flightInfo": {
+              "facilities": [],
+              "flightNumber": 2007,
+              "planeType": "",
+              "carrierInfo": {
+                "operatingCarrier": "6E",
+                "marketingCarrier": "6E",
+                "operatingCarrierDisclosureText": ""
+              }
+            },
+            "carriers": [
+              "6E",
+              "6E"
+            ],
+            "carriersData": [
+              {
+                "name": "IndiGo",
+                "code": "6E",
+                "logo": "https://r-xx.bstatic.com/data/airlines_logo/6E.png"
+              },
+              {
+                "name": "IndiGo",
+                "code": "6E",
+                "logo": "https://r-xx.bstatic.com/data/airlines_logo/6E.png"
+              }
+            ],
+            "totalTime": 8100,
+            "flightStops": [],
+            "amenities": []
+          }
+        ],
+        "totalTime": 8100,
+        "travellerCheckedLuggage": [
+          {
+            "travellerReference": "1",
+            "luggageAllowance": {
+              "luggageType": "CHECKED_IN",
+              "ruleType": "PIECE_BASED",
+              "maxPiece": 1,
+              "maxWeightPerPiece": 33.1,
+              "massUnit": "LB"
+            }
+          },
+          {
+            "travellerReference": "2",
+            "luggageAllowance": {
+              "luggageType": "CHECKED_IN",
+              "ruleType": "PIECE_BASED",
+              "maxPiece": 1,
+              "maxWeightPerPiece": 33.1,
+              "massUnit": "LB"
+            }
+          }
+        ],
+        "travellerCabinLuggage": [
+          {
+            "travellerReference": "1",
+            "luggageAllowance": {
+              "luggageType": "HAND",
+              "maxPiece": 1,
+              "maxWeightPerPiece": 15.4,
+              "massUnit": "LB",
+              "sizeRestrictions": {
+                "maxLength": 21.7,
+                "maxWidth": 13.8,
+                "maxHeight": 9.8,
+                "sizeUnit": "INCH"
+              }
+            },
+            "personalItem": true
+          },
+          {
+            "travellerReference": "2",
+            "luggageAllowance": {
+              "luggageType": "HAND",
+              "maxPiece": 1,
+              "maxWeightPerPiece": 15.4,
+              "massUnit": "LB",
+              "sizeRestrictions": {
+                "maxLength": 21.7,
+                "maxWidth": 13.8,
+                "maxHeight": 9.8,
+                "sizeUnit": "INCH"
+              }
+            },
+            "personalItem": true
+          }
+        ],
+        "isAtolProtected": false,
+        "showWarningDestinationAirport": false,
+        "showWarningOriginAirport": false
+      }
+    ],
+    "priceBreakdown": {
+      "total": {
+        "currencyCode": "INR",
+        "units": 12929,
+        "nanos": 10000000
+      },
+      "baseFare": {
+        "currencyCode": "INR",
+        "units": 10495,
+        "nanos": 790000000
+      },
+      "fee": {
+        "currencyCode": "INR",
+        "units": 0,
+        "nanos": 0
+      },
+      "tax": {
+        "currencyCode": "INR",
+        "units": 1652,
+        "nanos": 690000000
+      },
+      "totalRounded": {
+        "currencyCode": "INR",
+        "nanos": 150000000,
+        "units": 12950
+      },
+      "discount": {
+        "currencyCode": "INR",
+        "units": 0,
+        "nanos": 0
+      },
+      "totalWithoutDiscount": {
+        "currencyCode": "INR",
+        "units": 13232,
+        "nanos": 60000000
+      },
+      "totalWithoutDiscountRounded": {
+        "currencyCode": "INR",
+        "nanos": 530000000,
+        "units": 13302
+      },
+      "bcomMargin": {
+        "currencyCode": "INR",
+        "units": 780,
+        "nanos": 530000000
+      },
+      "bcomPricingItems": [
+        {
+          "amount": {
+            "currencyCode": "INR",
+            "units": 1083,
+            "nanos": 580000000
+          },
+          "itemType": "PLATFORM_SERVICE_FEE",
+          "name": "Platform service fee"
+        },
+        {
+          "amount": {
+            "currencyCode": "INR",
+            "units": -264,
+            "nanos": 290000000
+          },
+          "itemType": "BOOKING_PAYS",
+          "name": "Booking.com pays"
+        }
+      ],
+      "carrierTaxBreakdown": [
+        {
+          "carrier": {
+            "name": "IndiGo",
+            "code": "6E",
+            "logo": "https://r-xx.bstatic.com/data/airlines_logo/6E.png"
+          },
+          "avgPerAdult": {
+            "currencyCode": "INR",
+            "units": 826,
+            "nanos": 340000000
+          },
+          "avgPerChild": {
+            "currencyCode": "INR",
+            "units": 826,
+            "nanos": 340000000
+          }
+        }
+      ],
+      "showPriceStrikethrough": false
+    },
+    "travellerPrices": [
+      {
+        "travellerPriceBreakdown": {
+          "total": {
+            "currencyCode": "INR",
+            "units": 5328,
+            "nanos": 940000000
+          },
+          "baseFare": {
+            "currencyCode": "INR",
+            "units": 4242,
+            "nanos": 720000000
+          },
+          "fee": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "tax": {
+            "currencyCode": "INR",
+            "units": 826,
+            "nanos": 340000000
+          },
+          "totalRounded": {
+            "currencyCode": "INR",
+            "nanos": 870000000,
+            "units": 5373
+          },
+          "discount": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "totalWithoutDiscount": {
+            "currencyCode": "INR",
+            "units": 5430,
+            "nanos": 250000000
+          },
+          "totalWithoutDiscountRounded": {
+            "currencyCode": "INR",
+            "nanos": 970000000,
+            "units": 5461
+          },
+          "bcomMargin": {
+            "currencyCode": "INR",
+            "units": 259,
+            "nanos": 880000000
+          },
+          "bcomPricingItems": [
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "itemType": "PLATFORM_SERVICE_FEE",
+              "name": "Platform service fee"
+            },
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": -88,
+                "nanos": 100000000
+              },
+              "itemType": "BOOKING_PAYS",
+              "name": "Booking.com pays"
+            }
+          ],
+          "showPriceStrikethrough": false
+        },
+        "travellerReference": "1",
+        "travellerType": "ADULT"
+      },
+      {
+        "travellerPriceBreakdown": {
+          "total": {
+            "currencyCode": "INR",
+            "units": 5329,
+            "nanos": 820000000
+          },
+          "baseFare": {
+            "currencyCode": "INR",
+            "units": 4243,
+            "nanos": 600000000
+          },
+          "fee": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "tax": {
+            "currencyCode": "INR",
+            "units": 826,
+            "nanos": 340000000
+          },
+          "totalRounded": {
+            "currencyCode": "INR",
+            "nanos": 870000000,
+            "units": 5373
+          },
+          "discount": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "totalWithoutDiscount": {
+            "currencyCode": "INR",
+            "units": 5431,
+            "nanos": 130000000
+          },
+          "totalWithoutDiscountRounded": {
+            "currencyCode": "INR",
+            "nanos": 970000000,
+            "units": 5461
+          },
+          "bcomMargin": {
+            "currencyCode": "INR",
+            "units": 259,
+            "nanos": 880000000
+          },
+          "bcomPricingItems": [
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "itemType": "PLATFORM_SERVICE_FEE",
+              "name": "Platform service fee"
+            },
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": -88,
+                "nanos": 100000000
+              },
+              "itemType": "BOOKING_PAYS",
+              "name": "Booking.com pays"
+            }
+          ],
+          "showPriceStrikethrough": false
+        },
+        "travellerReference": "2",
+        "travellerType": "KID"
+      },
+      {
+        "travellerPriceBreakdown": {
+          "total": {
+            "currencyCode": "INR",
+            "units": 2269,
+            "nanos": 360000000
+          },
+          "baseFare": {
+            "currencyCode": "INR",
+            "units": 2009,
+            "nanos": 480000000
+          },
+          "fee": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "tax": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "totalRounded": {
+            "currencyCode": "INR",
+            "nanos": 500000000,
+            "units": 2290
+          },
+          "discount": {
+            "currencyCode": "INR",
+            "units": 0,
+            "nanos": 0
+          },
+          "totalWithoutDiscount": {
+            "currencyCode": "INR",
+            "units": 2370,
+            "nanos": 670000000
+          },
+          "totalWithoutDiscountRounded": {
+            "currencyCode": "INR",
+            "nanos": 600000000,
+            "units": 2378
+          },
+          "bcomMargin": {
+            "currencyCode": "INR",
+            "units": 259,
+            "nanos": 880000000
+          },
+          "bcomPricingItems": [
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "itemType": "PLATFORM_SERVICE_FEE",
+              "name": "Platform service fee"
+            },
+            {
+              "amount": {
+                "currencyCode": "INR",
+                "units": -88,
+                "nanos": 100000000
+              },
+              "itemType": "BOOKING_PAYS",
+              "name": "Booking.com pays"
+            }
+          ],
+          "showPriceStrikethrough": false
+        },
+        "travellerReference": "3",
+        "travellerType": "KID"
+      }
+    ],
+    "priceDisplayRequirements": [],
+    "pointOfSale": "us",
+    "tripType": "ONEWAY",
+    "offerReference": "d6a1f_2526296915",
+    "travellerDataRequirements": [
+      "DATE_OF_BIRTH"
+    ],
+    "bookerDataRequirement": [
+      "EMAIL",
+      "PHONE"
+    ],
+    "travellers": [
+      {
+        "travellerReference": "1",
+        "type": "ADULT"
+      },
+      {
+        "travellerReference": "2",
+        "type": "KID",
+        "age": 17
+      },
+      {
+        "travellerReference": "3",
+        "type": "KID",
+        "age": 0
+      }
+    ],
+    "posMismatch": {
+      "detectedPointOfSale": "us",
+      "isPOSMismatch": false,
+      "offerSalesCountry": "us"
+    },
+    "includedProductsBySegment": [
+      [
+        {
+          "travellerReference": "1",
+          "travellerProducts": [
+            {
+              "type": "checkedInBaggage",
+              "product": {
+                "luggageType": "CHECKED_IN",
+                "ruleType": "PIECE_BASED",
+                "maxPiece": 1,
+                "maxWeightPerPiece": 33.1,
+                "massUnit": "LB"
+              }
+            },
+            {
+              "type": "cabinBaggage",
+              "product": {
+                "luggageType": "HAND",
+                "maxPiece": 1,
+                "maxWeightPerPiece": 15.4,
+                "massUnit": "LB",
+                "sizeRestrictions": {
+                  "maxLength": 21.7,
+                  "maxWidth": 13.8,
+                  "maxHeight": 9.8,
+                  "sizeUnit": "INCH"
+                }
+              }
+            },
+            {
+              "type": "personalItem"
+            }
+          ]
+        },
+        {
+          "travellerReference": "2",
+          "travellerProducts": [
+            {
+              "type": "checkedInBaggage",
+              "product": {
+                "luggageType": "CHECKED_IN",
+                "ruleType": "PIECE_BASED",
+                "maxPiece": 1,
+                "maxWeightPerPiece": 33.1,
+                "massUnit": "LB"
+              }
+            },
+            {
+              "type": "cabinBaggage",
+              "product": {
+                "luggageType": "HAND",
+                "maxPiece": 1,
+                "maxWeightPerPiece": 15.4,
+                "massUnit": "LB",
+                "sizeRestrictions": {
+                  "maxLength": 21.7,
+                  "maxWidth": 13.8,
+                  "maxHeight": 9.8,
+                  "sizeUnit": "INCH"
+                }
+              }
+            },
+            {
+              "type": "personalItem"
+            }
+          ]
+        }
+      ]
+    ],
+    "includedProducts": {
+      "areAllSegmentsIdentical": true,
+      "segments": [
+        [
+          {
+            "luggageType": "PERSONAL_ITEM",
+            "maxPiece": 2,
+            "piecePerPax": 1
+          },
+          {
+            "luggageType": "HAND",
+            "maxPiece": 2,
+            "maxWeightPerPiece": 15.4,
+            "massUnit": "LB",
+            "sizeRestrictions": {
+              "maxLength": 21.7,
+              "maxWidth": 13.8,
+              "maxHeight": 9.8,
+              "sizeUnit": "INCH"
+            },
+            "piecePerPax": 1
+          },
+          {
+            "luggageType": "CHECKED_IN",
+            "ruleType": "PIECE_BASED",
+            "maxPiece": 2,
+            "maxWeightPerPiece": 33.1,
+            "massUnit": "LB",
+            "piecePerPax": 1
+          }
+        ]
+      ]
+    },
+    "extraProducts": [],
+    "offerExtras": {},
+    "ancillaries": {},
+    "brandedFareInfo": {
+      "fareName": "Standard",
+      "features": [
+        {
+          "featureName": "PERSONAL_BAGGAGE",
+          "category": "BAGGAGE",
+          "code": "BK03",
+          "label": "2 personal items",
+          "availability": "INCLUDED",
+          "priority": 0,
+          "content": {}
+        },
+        {
+          "featureName": "CABIN_BAGGAGE",
+          "category": "BAGGAGE",
+          "code": "BK02",
+          "label": "2 cabin bags (15.4 lbs each)\t",
+          "availability": "INCLUDED",
+          "priority": 2,
+          "content": {}
+        },
+        {
+          "featureName": "CHECK_BAGGAGE",
+          "category": "BAGGAGE",
+          "code": "BK01",
+          "label": "2 checked bags (33.1 lbs each)",
+          "availability": "INCLUDED",
+          "priority": 4,
+          "content": {}
+        }
+      ],
+      "fareAttributes": [],
+      "nonIncludedFeaturesRequired": false,
+      "nonIncludedFeatures": [],
+      "featuresList": [],
+      "checkinBaggageExcluded": false,
+      "cabinBaggageExcluded": false
+    },
+    "appliedDiscounts": [],
+    "offerKeyToHighlight": "1_6E2007.BOM20250921",
+    "baggagePolicies": [
+      {
+        "code": "6E",
+        "name": "IndiGo",
+        "url": "https://www.goindigo.in/baggage.html"
+      }
+    ],
+    "extraProductDisplayRequirements": {},
+    "unifiedPriceBreakdown": {
+      "id": "6E2007.BOM2025-09-21T23:45:00.DEL2025-09-22T02:00:00.ECONOMY_0_1ADULT.1CHILD.1INFANT_DIRECT_ETG",
+      "price": {
+        "currencyCode": "INR",
+        "units": 12929,
+        "nanos": 10000000
+      },
+      "items": [
+        {
+          "scope": "FLIGHT_ADULT",
+          "id": "flight_adult",
+          "title": "Adult (1)",
+          "price": {
+            "currencyCode": "INR",
+            "units": 5430,
+            "nanos": 250000000
+          },
+          "items": [
+            {
+              "id": "flight_adult-basefare",
+              "title": "Flight fare",
+              "price": {
+                "currencyCode": "INR",
+                "units": 4242,
+                "nanos": 720000000
+              },
+              "items": []
+            },
+            {
+              "id": "flight_adult-tax",
+              "title": "Taxes and airline fees",
+              "price": {
+                "currencyCode": "INR",
+                "units": 826,
+                "nanos": 340000000
+              },
+              "items": []
+            },
+            {
+              "id": "flight_adult-platform_service_fee",
+              "title": "Platform service fee",
+              "price": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "items": []
+            }
+          ]
+        },
+        {
+          "scope": "FLIGHT_CHILD",
+          "id": "flight_child",
+          "title": "Child (1)",
+          "price": {
+            "currencyCode": "INR",
+            "units": 5431,
+            "nanos": 130000000
+          },
+          "items": [
+            {
+              "id": "flight_child-basefare",
+              "title": "Flight fare",
+              "price": {
+                "currencyCode": "INR",
+                "units": 4243,
+                "nanos": 600000000
+              },
+              "items": []
+            },
+            {
+              "id": "flight_child-tax",
+              "title": "Taxes and airline fees",
+              "price": {
+                "currencyCode": "INR",
+                "units": 826,
+                "nanos": 340000000
+              },
+              "items": []
+            },
+            {
+              "id": "flight_child-platform_service_fee",
+              "title": "Platform service fee",
+              "price": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "items": []
+            }
+          ]
+        },
+        {
+          "scope": "FLIGHT_INFANT",
+          "id": "flight_infant",
+          "title": "Infant (1)",
+          "price": {
+            "currencyCode": "INR",
+            "units": 2370,
+            "nanos": 670000000
+          },
+          "items": [
+            {
+              "id": "flight_infant-basefare",
+              "title": "Flight fare",
+              "price": {
+                "currencyCode": "INR",
+                "units": 2009,
+                "nanos": 480000000
+              },
+              "items": []
+            },
+            {
+              "id": "flight_infant-platform_service_fee",
+              "title": "Platform service fee",
+              "price": {
+                "currencyCode": "INR",
+                "units": 361,
+                "nanos": 190000000
+              },
+              "items": []
+            }
+          ]
+        },
+        {
+          "id": "discount-booking_pays",
+          "title": "Booking.com pays",
+          "price": {
+            "currencyCode": "INR",
+            "units": -264,
+            "nanos": 290000000
+          },
+          "items": [],
+          "scope": "DISCOUNT"
+        }
+      ],
+      "addedItems": []
+    },
+    "perTravellerPriceDifferences": [],
+    "displayOptions": {
+      "skipExtrasPage": false
+    },
+    "personalisationSegments": [
+      "INTERNATIONAL_FAMILY_VACATIONERS",
+      "SHORT_HAUL_TRIP",
+      "FAMILY_TRAVELLERS"
+    ]
+  }
+}

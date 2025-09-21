@@ -1,0 +1,1332 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1758438491165,
+  "data": {
+    "hotels": [
+      {
+        "hotel_id": 11662549,
+        "accessibilityLabel": "Treebo Cranberry Delight, Manyata Tech Park.\n3 out of 5 stars.\nThis is a Preferred property.\n7.4 Good 26 reviews.\n‎HBR Layout‬ • ‎7 km from downtown‬.\nLimited-time Deal.\nBreakfast included.\n Hotel room : 1 bed.\nOriginal price 7493 INR. Current price 2997 INR..\n+360 INR taxes and charges.\nOnly 4 left at this price on Booking.com.",
+        "property": {
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "11:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "longitude": 77.6302653328228,
+          "rankingPosition": 0,
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "00:00"
+          },
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "name": "Treebo Cranberry Delight, Manyata Tech Park",
+          "reviewScore": 7.4,
+          "propertyClass": 3,
+          "checkoutDate": "2025-09-24",
+          "latitude": 13.0330959670352,
+          "reviewCount": 26,
+          "countryCode": "in",
+          "position": 0,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "mainPhotoId": 599218338,
+          "ufi": -2090174,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 359.6688
+            },
+            "benefitBadges": [
+              {
+                "variant": "constructive",
+                "identifier": "Limited Time Deal",
+                "text": "Limited-time Deal",
+                "explanation": "Limited-time Deal"
+              }
+            ],
+            "strikethroughPrice": {
+              "currency": "INR",
+              "value": 7493.1
+            },
+            "grossPrice": {
+              "value": 2997.24,
+              "currency": "INR"
+            }
+          },
+          "id": 11662549,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/599218338.jpg?k=1f5b5657d3360b9c4846697d27f6e7a245a6604f29f8a67d2dc521511a2c4728&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/599218338.jpg?k=1f5b5657d3360b9c4846697d27f6e7a245a6604f29f8a67d2dc521511a2c4728&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/599218338.jpg?k=1f5b5657d3360b9c4846697d27f6e7a245a6604f29f8a67d2dc521511a2c4728&o="
+          ],
+          "reviewScoreWord": "Good",
+          "blockIds": [
+            "1166254905_389271613_2_1_0_1198904"
+          ]
+        }
+      },
+      {
+        "hotel_id": 14834462,
+        "accessibilityLabel": "CASA ALBELA - designer luxe 1BHK suite , Central Bangalore.\n4 out of 5 for property rating.\nThis is a Preferred Plus property.\n10 Exceptional 3 reviews.\n‎3.8 km from downtown‬.\n Entire apartment – 55 m² : 2 beds • 1 bedroom • 1 living room • 1 bathroom.\n8100 INR.\n+1944 INR taxes and charges.\nOnly 2 left at this price on Booking.com.",
+        "property": {
+          "accuratePropertyClass": 0,
+          "checkinDate": "2025-09-22",
+          "rankingPosition": 1,
+          "longitude": 77.6207467885808,
+          "isPreferredPlus": true,
+          "optOutFromGalleryChanges": 0,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "11:00"
+          },
+          "name": "CASA ALBELA - designer luxe 1BHK suite , Central Bangalore",
+          "propertyClass": 0,
+          "reviewScore": 10,
+          "checkoutDate": "2025-09-24",
+          "checkin": {
+            "untilTime": "23:00",
+            "fromTime": "13:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "countryCode": "in",
+          "position": 1,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "latitude": 13.0051671716051,
+          "reviewCount": 3,
+          "reviewScoreWord": "Exceptional",
+          "blockIds": [
+            "1483446203_419839422_3_0_0"
+          ],
+          "priceBreakdown": {
+            "excludedPrice": {
+              "value": 1944,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 8100,
+              "currency": "INR"
+            }
+          },
+          "mainPhotoId": 745312630,
+          "ufi": -2090174,
+          "qualityClass": 4,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/745312630.jpg?k=f4c272e1524d29bf30382ca23de2388f62f1db9fe0a7ca03de0f9e2e28295302&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/745312630.jpg?k=f4c272e1524d29bf30382ca23de2388f62f1db9fe0a7ca03de0f9e2e28295302&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/745312630.jpg?k=f4c272e1524d29bf30382ca23de2388f62f1db9fe0a7ca03de0f9e2e28295302&o="
+          ],
+          "id": 14834462
+        }
+      },
+      {
+        "hotel_id": 11540265,
+        "accessibilityLabel": "Olive Serviced Apartments BTM Layout.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n9.3 Wonderful 104 reviews.\n‎BTM Layout‬ • ‎6.9 km from downtown‬.\n Entire apartment – 51 m² : 1 bed • 1 bedroom • 1 living room • 1 bathroom.\n6820 INR.\n+818 INR taxes and charges.\nOnly 2 left at this price on Booking.com.",
+        "property": {
+          "optOutFromGalleryChanges": 0,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "10:00"
+          },
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22",
+          "rankingPosition": 2,
+          "longitude": 77.610610486508,
+          "isPreferredPlus": true,
+          "checkin": {
+            "untilTime": "23:00",
+            "fromTime": "14:00"
+          },
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "name": "Olive Serviced Apartments BTM Layout",
+          "checkoutDate": "2025-09-24",
+          "propertyClass": 3,
+          "reviewScore": 9.3,
+          "latitude": 12.915061205392,
+          "reviewCount": 104,
+          "countryCode": "in",
+          "isFirstPage": true,
+          "position": 2,
+          "isPreferred": true,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 6820,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "excludedPrice": {
+              "value": 818.4,
+              "currency": "INR"
+            },
+            "benefitBadges": []
+          },
+          "qualityClass": 0,
+          "mainPhotoId": 536802173,
+          "ufi": -2090174,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/536802173.jpg?k=63377d0157eb3181cb2ebc16c3bc3ee2518e2f30b52cb87343eb15f06b35bf0a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/536802173.jpg?k=63377d0157eb3181cb2ebc16c3bc3ee2518e2f30b52cb87343eb15f06b35bf0a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/536802173.jpg?k=63377d0157eb3181cb2ebc16c3bc3ee2518e2f30b52cb87343eb15f06b35bf0a&o="
+          ],
+          "id": 11540265,
+          "reviewScoreWord": "Wonderful",
+          "blockIds": [
+            "1154026502_388181491_2_0_0"
+          ]
+        }
+      },
+      {
+        "hotel_id": 1162756,
+        "accessibilityLabel": "Olive Hotel Palace Road by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n9.0 Wonderful 416 reviews.\n‎Sheshadripuram‬ • ‎3.2 km from downtown‬.\n Private room : 1 bed.\n5600 INR.\n+672 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.\nOnly 4 left at this price on Booking.com.",
+        "property": {
+          "reviewScoreWord": "Wonderful",
+          "blockIds": [
+            "116275615_86235511_0_0_0"
+          ],
+          "mainPhotoId": 725617142,
+          "ufi": -2090174,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 5600,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 672
+            },
+            "benefitBadges": []
+          },
+          "id": 1162756,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/725617142.jpg?k=80e6a39324d4499c351108eb459b270a70ab01459501dcbe04d98220de4e3dd9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/725617142.jpg?k=80e6a39324d4499c351108eb459b270a70ab01459501dcbe04d98220de4e3dd9&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/725617142.jpg?k=80e6a39324d4499c351108eb459b270a70ab01459501dcbe04d98220de4e3dd9&o="
+          ],
+          "countryCode": "in",
+          "position": 3,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "latitude": 12.999195855792,
+          "reviewCount": 416,
+          "name": "Olive Hotel Palace Road by Embassy Group",
+          "propertyClass": 3,
+          "reviewScore": 9,
+          "checkoutDate": "2025-09-24",
+          "checkin": {
+            "untilTime": "18:00",
+            "fromTime": "13:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "isPreferredPlus": true,
+          "longitude": 77.5832431018353,
+          "rankingPosition": 3,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 1
+        }
+      },
+      {
+        "hotel_id": 14028869,
+        "accessibilityLabel": "Olive Hotel Dairy Circle by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n9.3 Wonderful 23 reviews.\n‎3.6 km from downtown‬.\nGetaway Deal.\n Hotel room : 1 bed.\nOriginal price 6112 INR. Current price 3973 INR..\n+477 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "optOutFromGalleryChanges": 1,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22",
+          "rankingPosition": 4,
+          "longitude": 77.6025315,
+          "isPreferredPlus": true,
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "23:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "name": "Olive Hotel Dairy Circle by Embassy Group",
+          "propertyClass": 3,
+          "reviewScore": 9.3,
+          "checkoutDate": "2025-09-24",
+          "latitude": 12.9435587,
+          "reviewCount": 23,
+          "countryCode": "in",
+          "position": 4,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "priceBreakdown": {
+            "benefitBadges": [
+              {
+                "identifier": "Getaway 2021 Deals",
+                "variant": "constructive",
+                "explanation": "Getaway Deal",
+                "text": "Getaway Deal"
+              }
+            ],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 476.736
+            },
+            "taxExceptions": [],
+            "grossPrice": {
+              "value": 3972.8,
+              "currency": "INR"
+            },
+            "strikethroughPrice": {
+              "value": 6112,
+              "currency": "INR"
+            }
+          },
+          "mainPhotoId": 701730112,
+          "ufi": -2090174,
+          "qualityClass": 0,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/701730112.jpg?k=3c6f1a6abfde10140c84ba4c6a1b211b405cdfb737fa7736bddb6ee023fbd6dc&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/701730112.jpg?k=3c6f1a6abfde10140c84ba4c6a1b211b405cdfb737fa7736bddb6ee023fbd6dc&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/701730112.jpg?k=3c6f1a6abfde10140c84ba4c6a1b211b405cdfb737fa7736bddb6ee023fbd6dc&o="
+          ],
+          "id": 14028869,
+          "reviewScoreWord": "Wonderful",
+          "blockIds": [
+            "1402886901_415341073_2_0_0_1134437"
+          ]
+        }
+      },
+      {
+        "hotel_id": 11416499,
+        "accessibilityLabel": "Hotel Le Opera.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.5 Very Good 528 reviews.\n‎7.4 km from downtown‬.\n Hotel room : 1 bed.\n5410 INR.\n+649 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "countryCode": "in",
+          "position": 5,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "latitude": 13.031914455648,
+          "reviewCount": 528,
+          "reviewScoreWord": "Very Good",
+          "blockIds": [
+            "1141649901_387011015_2_0_0"
+          ],
+          "priceBreakdown": {
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 649.2
+            },
+            "benefitBadges": [],
+            "grossPrice": {
+              "value": 5410,
+              "currency": "INR"
+            }
+          },
+          "ufi": -2090174,
+          "mainPhotoId": 523303762,
+          "qualityClass": 0,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/523303762.jpg?k=90ea9cb82fc27260174cac1dc391446bc2e36d0cd60fda022b6c89e3780ee50a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/523303762.jpg?k=90ea9cb82fc27260174cac1dc391446bc2e36d0cd60fda022b6c89e3780ee50a&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/523303762.jpg?k=90ea9cb82fc27260174cac1dc391446bc2e36d0cd60fda022b6c89e3780ee50a&o="
+          ],
+          "id": 11416499,
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22",
+          "longitude": 77.563603403436,
+          "rankingPosition": 5,
+          "isPreferredPlus": true,
+          "optOutFromGalleryChanges": 1,
+          "checkout": {
+            "fromTime": "01:00",
+            "untilTime": "11:00"
+          },
+          "name": "Hotel Le Opera",
+          "reviewScore": 8.5,
+          "propertyClass": 3,
+          "checkoutDate": "2025-09-24",
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "18:00"
+          },
+          "currency": "INR",
+          "wishlistName": "Bangalore"
+        }
+      },
+      {
+        "hotel_id": 13130491,
+        "accessibilityLabel": "Grand Continent Koramangala, Bangalore.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.3 Very Good 64 reviews.\n‎Koramangala‬ • ‎6 km from downtown‬.\n Hotel room : 2 beds.\nOriginal price 11919 INR. Current price 8939 INR..\n+1073 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "position": 6,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "countryCode": "in",
+          "reviewCount": 64,
+          "latitude": 12.9300776317322,
+          "blockIds": [
+            "1313049107_404100155_2_42_0"
+          ],
+          "reviewScoreWord": "Very Good",
+          "id": 13130491,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/616379387.jpg?k=e1ea5b111c3202a922380e7df01bfa9fd90993b229e70dccce8706f6899b7cb7&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/616379387.jpg?k=e1ea5b111c3202a922380e7df01bfa9fd90993b229e70dccce8706f6899b7cb7&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/616379387.jpg?k=e1ea5b111c3202a922380e7df01bfa9fd90993b229e70dccce8706f6899b7cb7&o="
+          ],
+          "ufi": -2090174,
+          "mainPhotoId": 616379387,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "excludedPrice": {
+              "value": 1072.6836,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "benefitBadges": [],
+            "strikethroughPrice": {
+              "value": 11918.7,
+              "currency": "INR"
+            },
+            "grossPrice": {
+              "currency": "INR",
+              "value": 8939.03
+            }
+          },
+          "isPreferredPlus": true,
+          "longitude": 77.6308853880752,
+          "rankingPosition": 6,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "06:00"
+          },
+          "optOutFromGalleryChanges": 0,
+          "propertyClass": 3,
+          "reviewScore": 8.3,
+          "checkoutDate": "2025-09-24",
+          "name": "Grand Continent Koramangala, Bangalore",
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "checkin": {
+            "untilTime": "14:00",
+            "fromTime": "12:00"
+          }
+        }
+      },
+      {
+        "hotel_id": 10594212,
+        "accessibilityLabel": "Olive Hotel JP Nagar by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.3 Very Good 293 reviews.\n‎JP Nagar‬ • ‎7.9 km from downtown‬.\n Hotel room : 1 bed.\n4920 INR.\n+590 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.\nOnly 3 left at this price on Booking.com.",
+        "property": {
+          "blockIds": [
+            "1059421202_415971513_2_0_0"
+          ],
+          "reviewScoreWord": "Very Good",
+          "id": 10594212,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/750071515.jpg?k=9a50a8eabdb4f9025c8459c0bf087219fb841fbf4cf7483821df194799a53c4f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/750071515.jpg?k=9a50a8eabdb4f9025c8459c0bf087219fb841fbf4cf7483821df194799a53c4f&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/750071515.jpg?k=9a50a8eabdb4f9025c8459c0bf087219fb841fbf4cf7483821df194799a53c4f&o="
+          ],
+          "qualityClass": 0,
+          "ufi": -2090174,
+          "mainPhotoId": 750071515,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 4920,
+              "currency": "INR"
+            },
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 590.4
+            },
+            "taxExceptions": [],
+            "benefitBadges": []
+          },
+          "isFirstPage": true,
+          "position": 7,
+          "isPreferred": true,
+          "countryCode": "in",
+          "reviewCount": 293,
+          "latitude": 12.906101139697,
+          "checkoutDate": "2025-09-24",
+          "reviewScore": 8.3,
+          "propertyClass": 3,
+          "name": "Olive Hotel JP Nagar by Embassy Group",
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "18:00"
+          },
+          "isPreferredPlus": true,
+          "rankingPosition": 7,
+          "longitude": 77.594501603333,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 1
+        }
+      },
+      {
+        "hotel_id": 3925044,
+        "accessibilityLabel": "Hotel Chetan International.\n3 out of 5 stars.\nThis is a Preferred property.\n7.1 Good 582 reviews.\n‎Gandhi nagar‬ • ‎2.6 km from downtown‬.\nMobile-only price.\n Hotel room : 1 bed.\nOriginal price 4000 INR. Current price 2800 INR..\n+336 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "checkin": {
+            "fromTime": "11:00",
+            "untilTime": "00:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "name": "Hotel Chetan International",
+          "reviewScore": 7.1,
+          "propertyClass": 3,
+          "checkoutDate": "2025-09-24",
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 0,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "rankingPosition": 8,
+          "longitude": 77.578386,
+          "mainPhotoId": 332185084,
+          "ufi": -2090174,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 2800
+            },
+            "strikethroughPrice": {
+              "value": 4000,
+              "currency": "INR"
+            },
+            "benefitBadges": [
+              {
+                "explanation": "Mobile-only price",
+                "text": "Mobile-only price",
+                "identifier": "Mobile Rate",
+                "variant": "constructive"
+              }
+            ],
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 336
+            }
+          },
+          "id": 3925044,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/332185084.jpg?k=be6b244a0277b865b65b6eb24ee6c2ec17368933add0509fdac39b632a6e2f39&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/332185084.jpg?k=be6b244a0277b865b65b6eb24ee6c2ec17368933add0509fdac39b632a6e2f39&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/332185084.jpg?k=be6b244a0277b865b65b6eb24ee6c2ec17368933add0509fdac39b632a6e2f39&o="
+          ],
+          "reviewScoreWord": "Good",
+          "blockIds": [
+            "392504409_297716691_0_0_0_852957"
+          ],
+          "latitude": 12.979256,
+          "reviewCount": 582,
+          "countryCode": "in",
+          "position": 8,
+          "isPreferred": true,
+          "isFirstPage": true
+        }
+      },
+      {
+        "hotel_id": 5906634,
+        "accessibilityLabel": "Misty Meridian Serviced Apartments.\nThis is a Preferred Plus property.\n4.9 Disappointing 195 reviews.\n‎11 km from downtown‬.\nGetaway Deal.\nBreakfast included.\n Entire apartment – 102 m² : 3 beds • 2 bedrooms • 1 living room • 2 bathrooms.\nOriginal price 6840 INR. Current price 5130 INR..\n+616 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "propertyClass": 0,
+          "reviewScore": 4.9,
+          "checkoutDate": "2025-09-24",
+          "name": "Misty Meridian Serviced Apartments",
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "checkin": {
+            "untilTime": "22:00",
+            "fromTime": "12:00"
+          },
+          "isPreferredPlus": true,
+          "rankingPosition": 9,
+          "longitude": 77.6110181971958,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 0,
+          "checkout": {
+            "fromTime": "12:00",
+            "untilTime": "12:00"
+          },
+          "optOutFromGalleryChanges": 0,
+          "blockIds": [
+            "590663401_333940917_2_1_0"
+          ],
+          "reviewScoreWord": "Disappointing",
+          "id": 5906634,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/238523464.jpg?k=f22c2578b3f304ccc6f9d1d9d02131f2fd6c73dd7c9cdf9bd95ea1a125ca6d71&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/238523464.jpg?k=f22c2578b3f304ccc6f9d1d9d02131f2fd6c73dd7c9cdf9bd95ea1a125ca6d71&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/238523464.jpg?k=f22c2578b3f304ccc6f9d1d9d02131f2fd6c73dd7c9cdf9bd95ea1a125ca6d71&o="
+          ],
+          "ufi": -2090174,
+          "mainPhotoId": 238523464,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 5130
+            },
+            "strikethroughPrice": {
+              "value": 6840,
+              "currency": "INR"
+            },
+            "benefitBadges": [
+              {
+                "identifier": "Getaway 2021 Deals",
+                "variant": "constructive",
+                "explanation": "Getaway Deal",
+                "text": "Getaway Deal"
+              }
+            ],
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 615.6
+            }
+          },
+          "position": 9,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "countryCode": "in",
+          "reviewCount": 195,
+          "latitude": 12.8773864272246
+        }
+      },
+      {
+        "hotel_id": 14028718,
+        "accessibilityLabel": "Open Hotel by Olive - Ejipura.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n9.6 Exceptional 26 reviews.\n‎Koramangala‬ • ‎5.2 km from downtown‬.\nMobile-only price.\n Hotel room : 1 bed.\nOriginal price 4238 INR. Current price 2967 INR..\n+356 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.\nOnly 4 left at this price on Booking.com.",
+        "property": {
+          "countryCode": "in",
+          "isFirstPage": true,
+          "position": 10,
+          "isPreferred": true,
+          "latitude": 12.9391501851985,
+          "reviewCount": 26,
+          "reviewScoreWord": "Exceptional",
+          "blockIds": [
+            "1402871802_412104636_2_0_0_1085219"
+          ],
+          "qualityClass": 0,
+          "ufi": -2090174,
+          "mainPhotoId": 710996542,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 2966.6,
+              "currency": "INR"
+            },
+            "strikethroughPrice": {
+              "currency": "INR",
+              "value": 4238
+            },
+            "benefitBadges": [
+              {
+                "explanation": "Mobile-only price",
+                "text": "Mobile-only price",
+                "identifier": "Mobile Rate",
+                "variant": "constructive"
+              }
+            ],
+            "excludedPrice": {
+              "value": 355.992,
+              "currency": "INR"
+            },
+            "taxExceptions": []
+          },
+          "id": 14028718,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/710996542.jpg?k=5e9ba808a1d89658d23869784c9ba7cd68cb66f1185b93082b0d2448ebb9f90e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/710996542.jpg?k=5e9ba808a1d89658d23869784c9ba7cd68cb66f1185b93082b0d2448ebb9f90e&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/710996542.jpg?k=5e9ba808a1d89658d23869784c9ba7cd68cb66f1185b93082b0d2448ebb9f90e&o="
+          ],
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "isPreferredPlus": true,
+          "longitude": 77.6310754979187,
+          "rankingPosition": 10,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "11:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "name": "Open Hotel by Olive - Ejipura",
+          "checkoutDate": "2025-09-24",
+          "propertyClass": 3,
+          "reviewScore": 9.6,
+          "checkin": {
+            "untilTime": "23:30",
+            "fromTime": "13:00"
+          },
+          "currency": "INR",
+          "wishlistName": "Bangalore"
+        }
+      },
+      {
+        "hotel_id": 8767499,
+        "accessibilityLabel": "Locul Midtown-Indiranagar.\nThis is a Preferred property.\n8.3 Very Good 792 reviews.\n‎Indiranagar‬ • ‎4.7 km from downtown‬.\n Hotel room : 1 bed.\n7254 INR.\n+870 INR taxes and charges.\nOnly 1 left at this price on Booking.com.",
+        "property": {
+          "rankingPosition": 11,
+          "longitude": 77.644724,
+          "accuratePropertyClass": 0,
+          "checkinDate": "2025-09-22",
+          "optOutFromGalleryChanges": 0,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "10:30"
+          },
+          "checkoutDate": "2025-09-24",
+          "reviewScore": 8.3,
+          "propertyClass": 0,
+          "name": "Locul Midtown-Indiranagar",
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "13:00"
+          },
+          "isFirstPage": true,
+          "isPreferred": true,
+          "position": 11,
+          "countryCode": "in",
+          "reviewCount": 792,
+          "latitude": 12.969508,
+          "blockIds": [
+            "876749914_361294964_2_42_0_268589"
+          ],
+          "reviewScoreWord": "Very Good",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/373359793.jpg?k=e5b2da3a0775573385195a275eb2b81817e29e649799295c4c101a2b083fc2aa&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/373359793.jpg?k=e5b2da3a0775573385195a275eb2b81817e29e649799295c4c101a2b083fc2aa&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/373359793.jpg?k=e5b2da3a0775573385195a275eb2b81817e29e649799295c4c101a2b083fc2aa&o="
+          ],
+          "id": 8767499,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 7254
+            },
+            "benefitBadges": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 870.48
+            },
+            "taxExceptions": []
+          },
+          "qualityClass": 0,
+          "ufi": -2090174,
+          "mainPhotoId": 373359793
+        }
+      },
+      {
+        "hotel_id": 13442000,
+        "accessibilityLabel": "Olive Zip Sanjay Nagar by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.4 Very Good 21 reviews.\n‎7.5 km from downtown‬.\n1 bed.\n3482 INR.\n+418 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.\nOnly 2 left at this price on Booking.com.",
+        "property": {
+          "id": 13442000,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/654442675.jpg?k=5f7c22dbabec5e539d82b6456b04e83a27f3c90bcee78e779efe224ba3a608b8&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/654442675.jpg?k=5f7c22dbabec5e539d82b6456b04e83a27f3c90bcee78e779efe224ba3a608b8&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/654442675.jpg?k=5f7c22dbabec5e539d82b6456b04e83a27f3c90bcee78e779efe224ba3a608b8&o="
+          ],
+          "ufi": -2090174,
+          "mainPhotoId": 654442675,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "grossPrice": {
+              "currency": "INR",
+              "value": 3481.8
+            },
+            "benefitBadges": [],
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 417.816
+            }
+          },
+          "blockIds": [
+            "1344200002_415972316_2_0_0_831605"
+          ],
+          "reviewScoreWord": "Very Good",
+          "reviewCount": 21,
+          "latitude": 13.0381878320441,
+          "position": 12,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "countryCode": "in",
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "checkin": {
+            "untilTime": "23:30",
+            "fromTime": "13:00"
+          },
+          "reviewScore": 8.4,
+          "propertyClass": 3,
+          "checkoutDate": "2025-09-24",
+          "name": "Olive Zip Sanjay Nagar by Embassy Group",
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "isPreferredPlus": true,
+          "rankingPosition": 12,
+          "longitude": 77.5742833566489,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3
+        }
+      },
+      {
+        "hotel_id": 14425151,
+        "accessibilityLabel": "Harvey's Hotels - Brookfield.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.7 Excellent 49 reviews.\n‎Brookefield‬ • ‎12.7 km from downtown‬.\nGetaway Deal.\n Hotel room : 1 bed.\nOriginal price 4797 INR. Current price 3358 INR..\n+403 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "reviewScoreWord": "Excellent",
+          "blockIds": [
+            "1442515103_415684276_2_2_0_1146615"
+          ],
+          "priceBreakdown": {
+            "strikethroughPrice": {
+              "currency": "INR",
+              "value": 4797
+            },
+            "grossPrice": {
+              "currency": "INR",
+              "value": 3357.9
+            },
+            "taxExceptions": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 402.948
+            },
+            "benefitBadges": [
+              {
+                "identifier": "Getaway 2021 Deals",
+                "variant": "constructive",
+                "explanation": "Getaway Deal",
+                "text": "Getaway Deal"
+              }
+            ]
+          },
+          "qualityClass": 0,
+          "mainPhotoId": 704561688,
+          "ufi": -2090174,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/704561688.jpg?k=cc41c6207bd30ad6a8de4f63a5e1c737b286b1be1f861a63bd3682d3c0806a80&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/704561688.jpg?k=cc41c6207bd30ad6a8de4f63a5e1c737b286b1be1f861a63bd3682d3c0806a80&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/704561688.jpg?k=cc41c6207bd30ad6a8de4f63a5e1c737b286b1be1f861a63bd3682d3c0806a80&o="
+          ],
+          "id": 14425151,
+          "countryCode": "in",
+          "isFirstPage": true,
+          "position": 13,
+          "isPreferred": true,
+          "latitude": 12.9611107163698,
+          "reviewCount": 49,
+          "name": "Harvey's Hotels - Brookfield",
+          "checkoutDate": "2025-09-24",
+          "propertyClass": 3,
+          "reviewScore": 8.7,
+          "checkin": {
+            "untilTime": "23:30",
+            "fromTime": "12:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22",
+          "rankingPosition": 13,
+          "longitude": 77.7176385031051,
+          "isPreferredPlus": true,
+          "optOutFromGalleryChanges": 0,
+          "checkout": {
+            "fromTime": "10:00",
+            "untilTime": "11:00"
+          }
+        }
+      },
+      {
+        "hotel_id": 11789845,
+        "accessibilityLabel": "Olive Zip Koramangala 4th Block by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n8.5 Very Good 223 reviews.\n‎Koramangala‬ • ‎5.5 km from downtown‬.\nGetaway Deal.\n Hotel room : 1 bed.\nOriginal price 5222 INR. Current price 4178 INR..\n+501 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "isPreferredPlus": true,
+          "rankingPosition": 14,
+          "longitude": 77.628575847221,
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "18:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "name": "Olive Zip Koramangala 4th Block by Embassy Group",
+          "checkoutDate": "2025-09-24",
+          "reviewScore": 8.5,
+          "propertyClass": 3,
+          "latitude": 12.934781532556,
+          "reviewCount": 223,
+          "countryCode": "in",
+          "isFirstPage": true,
+          "position": 14,
+          "isPreferred": true,
+          "qualityClass": 0,
+          "ufi": -2090174,
+          "mainPhotoId": 724158749,
+          "priceBreakdown": {
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 501.312
+            },
+            "taxExceptions": [],
+            "benefitBadges": [
+              {
+                "identifier": "Getaway 2021 Deals",
+                "variant": "constructive",
+                "text": "Getaway Deal",
+                "explanation": "Getaway Deal"
+              }
+            ],
+            "strikethroughPrice": {
+              "value": 5222,
+              "currency": "INR"
+            },
+            "grossPrice": {
+              "currency": "INR",
+              "value": 4177.6
+            }
+          },
+          "id": 11789845,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/724158749.jpg?k=aa89253c6685a05847d41bed386aba1fe8db1358c4e0e9b331f8df14246b8591&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/724158749.jpg?k=aa89253c6685a05847d41bed386aba1fe8db1358c4e0e9b331f8df14246b8591&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/724158749.jpg?k=aa89253c6685a05847d41bed386aba1fe8db1358c4e0e9b331f8df14246b8591&o="
+          ],
+          "reviewScoreWord": "Very Good",
+          "blockIds": [
+            "1178984501_390389087_2_0_0"
+          ]
+        }
+      },
+      {
+        "hotel_id": 13748640,
+        "accessibilityLabel": "Open Hotel by Olive - Moka.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n9.2 Wonderful 97 reviews.\n‎Basavanagudi‬ • ‎3.8 km from downtown‬.\n Hotel room : 1 bed.\n4172 INR.\n+501 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "checkin": {
+            "fromTime": "13:00",
+            "untilTime": "23:30"
+          },
+          "reviewScore": 9.2,
+          "propertyClass": 3,
+          "checkoutDate": "2025-09-24",
+          "name": "Open Hotel by Olive - Moka",
+          "optOutFromGalleryChanges": 1,
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "11:00"
+          },
+          "rankingPosition": 15,
+          "longitude": 77.5775725646735,
+          "isPreferredPlus": true,
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22",
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/661645499.jpg?k=024180a48055224ff527a8f128cee7990a30d11444dc2ccbd462b877a3498d90&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/661645499.jpg?k=024180a48055224ff527a8f128cee7990a30d11444dc2ccbd462b877a3498d90&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/661645499.jpg?k=024180a48055224ff527a8f128cee7990a30d11444dc2ccbd462b877a3498d90&o="
+          ],
+          "id": 13748640,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 500.64
+            },
+            "taxExceptions": [],
+            "grossPrice": {
+              "currency": "INR",
+              "value": 4172
+            }
+          },
+          "ufi": -2090174,
+          "mainPhotoId": 661645499,
+          "qualityClass": 0,
+          "blockIds": [
+            "1374864001_413394805_2_0_0"
+          ],
+          "reviewScoreWord": "Wonderful",
+          "reviewCount": 97,
+          "latitude": 12.9520190586571,
+          "position": 15,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "countryCode": "in"
+        }
+      },
+      {
+        "hotel_id": 374879,
+        "accessibilityLabel": "ibis Bengaluru Hosur Road - An Accor Brand.\n3 out of 5 stars.\nThis is a Preferred property.\n8.1 Very Good 575 reviews.\n‎9 km from downtown‬.\n Hotel room : 1 bed.\n8598 INR.\n+1032 INR taxes and charges.\nNo prepayment needed.",
+        "property": {
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 3,
+          "longitude": 77.6323161274195,
+          "rankingPosition": 16,
+          "checkout": {
+            "untilTime": "12:00",
+            "fromTime": "00:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "name": "ibis Bengaluru Hosur Road - An Accor Brand",
+          "checkoutDate": "2025-09-24",
+          "reviewScore": 8.1,
+          "propertyClass": 3,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "countryCode": "in",
+          "isFirstPage": true,
+          "position": 16,
+          "isPreferred": true,
+          "latitude": 12.9009037490432,
+          "reviewCount": 575,
+          "reviewScoreWord": "Very Good",
+          "blockIds": [
+            "37487901_95454128_2_42_0"
+          ],
+          "qualityClass": 0,
+          "mainPhotoId": 750371682,
+          "ufi": -2090174,
+          "priceBreakdown": {
+            "benefitBadges": [],
+            "taxExceptions": [],
+            "excludedPrice": {
+              "value": 1031.76,
+              "currency": "INR"
+            },
+            "grossPrice": {
+              "currency": "INR",
+              "value": 8598
+            }
+          },
+          "id": 374879,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/750371682.jpg?k=3eab1f4629ab22b85358fc72dbb04a87dee83f6844da7bec2a5be53c4222f7bf&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/750371682.jpg?k=3eab1f4629ab22b85358fc72dbb04a87dee83f6844da7bec2a5be53c4222f7bf&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/750371682.jpg?k=3eab1f4629ab22b85358fc72dbb04a87dee83f6844da7bec2a5be53c4222f7bf&o="
+          ]
+        }
+      },
+      {
+        "hotel_id": 9904341,
+        "accessibilityLabel": "The Hosteller Bangalore, Koramangala.\nThis is a Preferred Plus property.\n9.0 Wonderful 403 reviews.\n‎Koramangala‬ • ‎4.7 km from downtown‬.\nGetaway Deal.\n Hotel room : 1 bed.\nOriginal price 8054 INR. Current price 6282 INR..\n+754 INR taxes and charges.\nOnly 2 left at this price on Booking.com.",
+        "property": {
+          "checkout": {
+            "fromTime": "10:30",
+            "untilTime": "11:00"
+          },
+          "optOutFromGalleryChanges": 1,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 0,
+          "isPreferredPlus": true,
+          "longitude": 77.6130727402606,
+          "rankingPosition": 17,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "name": "The Hosteller Bangalore, Koramangala",
+          "reviewScore": 9,
+          "propertyClass": 0,
+          "checkoutDate": "2025-09-24",
+          "latitude": 12.9355636382761,
+          "reviewCount": 403,
+          "countryCode": "in",
+          "position": 17,
+          "isPreferred": true,
+          "isFirstPage": true,
+          "mainPhotoId": 702876280,
+          "ufi": -2090174,
+          "qualityClass": 0,
+          "priceBreakdown": {
+            "benefitBadges": [
+              {
+                "explanation": "Getaway Deal",
+                "text": "Getaway Deal",
+                "identifier": "Getaway 2021 Deals",
+                "variant": "constructive"
+              }
+            ],
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 753.8544
+            },
+            "taxExceptions": [],
+            "grossPrice": {
+              "value": 6282.12,
+              "currency": "INR"
+            },
+            "strikethroughPrice": {
+              "value": 8054,
+              "currency": "INR"
+            }
+          },
+          "id": 9904341,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/702876280.jpg?k=6422f55c03285f02f0ae53e85a1d1554613eb11bab5225b964e8e50201cc25ae&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/702876280.jpg?k=6422f55c03285f02f0ae53e85a1d1554613eb11bab5225b964e8e50201cc25ae&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/702876280.jpg?k=6422f55c03285f02f0ae53e85a1d1554613eb11bab5225b964e8e50201cc25ae&o="
+          ],
+          "reviewScoreWord": "Wonderful",
+          "blockIds": [
+            "990434105_391446494_2_0_0_920472"
+          ]
+        }
+      },
+      {
+        "hotel_id": 10026651,
+        "accessibilityLabel": "Olive Hotel HAL 2nd Stage by Embassy Group.\n3 out of 5 stars.\nThis is a Preferred Plus property.\n7.7 Good 410 reviews.\n‎5.4 km from downtown‬.\n Hotel room : 1 bed.\n6113 INR.\n+734 INR taxes and charges.\nFree cancellation.\nNo prepayment needed.",
+        "property": {
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/731540471.jpg?k=d08579d9e1eef4b0cd6c5467a640c714de8809c38a218af6cd4457fb46e7e06b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/731540471.jpg?k=d08579d9e1eef4b0cd6c5467a640c714de8809c38a218af6cd4457fb46e7e06b&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/731540471.jpg?k=d08579d9e1eef4b0cd6c5467a640c714de8809c38a218af6cd4457fb46e7e06b&o="
+          ],
+          "id": 10026651,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 6113,
+              "currency": "INR"
+            },
+            "excludedPrice": {
+              "currency": "INR",
+              "value": 733.56
+            },
+            "taxExceptions": [],
+            "benefitBadges": []
+          },
+          "qualityClass": 0,
+          "mainPhotoId": 731540471,
+          "ufi": -2090174,
+          "blockIds": [
+            "1002665101_373852546_2_2_0"
+          ],
+          "reviewScoreWord": "Good",
+          "reviewCount": 410,
+          "latitude": 12.9617255933651,
+          "isFirstPage": true,
+          "isPreferred": true,
+          "position": 18,
+          "countryCode": "in",
+          "currency": "INR",
+          "wishlistName": "Bangalore",
+          "checkin": {
+            "untilTime": "18:00",
+            "fromTime": "13:00"
+          },
+          "checkoutDate": "2025-09-24",
+          "reviewScore": 7.7,
+          "propertyClass": 3,
+          "name": "Olive Hotel HAL 2nd Stage by Embassy Group",
+          "optOutFromGalleryChanges": 1,
+          "checkout": {
+            "untilTime": "11:00",
+            "fromTime": "10:30"
+          },
+          "rankingPosition": 18,
+          "longitude": 77.6495125067806,
+          "isPreferredPlus": true,
+          "accuratePropertyClass": 3,
+          "checkinDate": "2025-09-22"
+        }
+      },
+      {
+        "hotel_id": 78800,
+        "accessibilityLabel": "The Oberoi Bengaluru.\n5 out of 5 stars.\nThis is a Preferred property.\n9.3 Wonderful 1970 reviews.\n‎Bangalore Shopping Area‬ • ‎1.8 km from downtown‬.\n Hotel room : 1 bed.\n59000 INR.\n+10620 INR taxes and charges.",
+        "property": {
+          "latitude": 12.9731738606426,
+          "reviewCount": 1970,
+          "countryCode": "in",
+          "isFirstPage": true,
+          "isPreferred": true,
+          "position": 19,
+          "qualityClass": 0,
+          "mainPhotoId": 31211348,
+          "ufi": -2090174,
+          "priceBreakdown": {
+            "grossPrice": {
+              "value": 59000,
+              "currency": "INR"
+            },
+            "excludedPrice": {
+              "value": 10620.0004,
+              "currency": "INR"
+            },
+            "taxExceptions": [],
+            "benefitBadges": []
+          },
+          "id": 78800,
+          "photoUrls": [
+            "https://cf.bstatic.com/xdata/images/hotel/square500/31211348.jpg?k=c469403df80f10e33120c7be42b61d458746716a4e04c62ad4b9afc1c22edc98&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square1024/31211348.jpg?k=c469403df80f10e33120c7be42b61d458746716a4e04c62ad4b9afc1c22edc98&o=",
+            "https://cf.bstatic.com/xdata/images/hotel/square2000/31211348.jpg?k=c469403df80f10e33120c7be42b61d458746716a4e04c62ad4b9afc1c22edc98&o="
+          ],
+          "reviewScoreWord": "Wonderful",
+          "blockIds": [
+            "7880014_364831211_2_42_0"
+          ],
+          "checkout": {
+            "fromTime": "00:00",
+            "untilTime": "12:00"
+          },
+          "optOutFromGalleryChanges": 0,
+          "checkinDate": "2025-09-22",
+          "accuratePropertyClass": 5,
+          "rankingPosition": 19,
+          "longitude": 77.618579864502,
+          "checkin": {
+            "untilTime": "00:00",
+            "fromTime": "14:00"
+          },
+          "wishlistName": "Bangalore",
+          "currency": "INR",
+          "name": "The Oberoi Bengaluru",
+          "checkoutDate": "2025-09-24",
+          "propertyClass": 5,
+          "reviewScore": 9.3
+        }
+      }
+    ],
+    "meta": [
+      {
+        "title": "1845 properties"
+      }
+    ],
+    "appear": [
+      {
+        "id": "cma",
+        "component": {
+          "props": {
+            "content": {
+              "props": {
+                "fitContentWidth": true,
+                "items": [
+                  {
+                    "props": {
+                      "component": {
+                        "props": {
+                          "spacing": "spacing_half",
+                          "items": [
+                            {
+                              "props": {
+                                "text": [
+                                  {
+                                    "font": "body_2",
+                                    "text": "Read more on how payments affect the order of listed properties"
+                                  },
+                                  {
+                                    "font": "strong_2",
+                                    "color": "foreground",
+                                    "text": "  "
+                                  },
+                                  {
+                                    "text": "Learn more",
+                                    "color": "action_foreground",
+                                    "font": "body_2",
+                                    "linkActions": [
+                                      {
+                                        "props": {
+                                          "url": "booking://webview?url=https%3A%2F%2Fm.booking.com%2Fgeneral.en-us.html%3Faid%3D332731%3Btmpl%3Ddocs%2Fterms-and-conditions"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "props": {}
+                  },
+                  {
+                    "props": {
+                      "component": {
+                        "props": {
+                          "icon": "close",
+                          "variant": "tertiary_tinted",
+                          "tertiaryTintedColor": "foreground",
+                          "accessibilityLabel": "Close"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "fill": true
+          }
+        }
+      },
+      {
+        "contentUrl": "https://mobile-apps.booking.com/json/mobile.saba?route_path=saba-chat-entrypoint&add_bh_info=1&add_genius_percentage_value=1&add_ribbon_text=1&affiliate_id=332731&arrival_date=2025-09-22&autoextend=1&booked_x_times_for_dates=1&booked_x_times_threshold=1&categories_filter_additional_data=&change_popularity_sort_option_copy_tag=1&change_sort_options_copy_tags=1&check_excluded_charge_or_tax=1&check_flexible_dates=1&check_is_candidate_wholesaler=1&currency_code=INR&dark_mode=1&deeplink_sec_since_click=168567.9046729803&departure_date=2025-09-24&dest_ids=-2090174&device_id=57d11ec8bad14e119e4c15a86202c23f&distance_unit=metric&dl_sr_adoption=1&dotd=2&exposure_api_version=2.17&fix_dotd=1&flex_window=0&generate_map_bounding_box=1&get_cny_campaign_banner=1&get_skiing_info=1&guest_qty=2&include_amazon_banner=1&include_apartment_config=1&include_badges_in_price_breakdown=1&include_beach_information=1&include_bh_quality_classification=1&include_block_ids=1&include_bsb_info=1&include_bwallet_hotel_eligibility=1&include_composite_breakdown=1&include_cpc_non_trader_copy=1&include_excluded_charges_detail=1&include_free_cancellation=1&include_genius_badge=1&include_last_reservation=1&include_nr_bookings_best_range_message=1&include_nr_bookings_today=1&include_offered_bed_types=1&include_preview_cards=1&include_rack_rate_savings=1&include_rtb=1&include_ski_information=1&languagecode=en-us&location_source=recents&mark_first_highlighted_hotel=1&min_saba_version=31&network_type=wifi&new_segments_carousel=1&offset=0&optimized_call=1&outcome=search_results&page_define_enabled=1&pref_match=0&reason=change_sort_options&remove_wishlist_padding=1&room_qty=1&rows=auto&saba=1&saba_payload_root=1&saba_version=50&sb_calendar_open=1&search_type=city&send_ranking_version=1&send_search_id=1&show_beach_filter_badge=1&show_city_distance=1&show_distance_to_beach=1&show_distance_to_nearest_public_transport=1&show_genius_free_breakfast=0&show_if_mobile_deal=1&show_negotiated_rates=1&show_no_prepayment=1&show_policy=1&show_review_score_breakdowns=1&show_selected_filter_values=1&show_soldout=1&sort_by=auto&sort_by_source=sort_options&sort_genius_new_copy=1&source=search_results&temperature_unit=c&travel_purpose=&unfiltered_count_enabled=1&units=metric&use_dest_based_list_creation=1&use_direct_payment=1&user_os=15.5&user_version=36.8-iphone&categories_filter=price%3A%3AINR-min-max&page=search-results"
+      },
+      {
+        "id": "banner_qualityrating",
+        "component": {
+          "props": {
+            "title": "",
+            "text": "Properties with these icons have been awarded Booking.com's quality rating for homes"
+          }
+        }
+      },
+      {
+        "component": {
+          "props": {
+            "title": "Sign in and save money",
+            "text": "Get instant access to our Genius loyalty program and enjoy discounts at properties worldwide."
+          }
+        },
+        "id": "signin_now"
+      }
+    ]
+  }
+}

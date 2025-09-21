@@ -1,0 +1,1804 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1758447642346,
+  "data": {
+    "__typename": "AttractionsProductSearchResponse",
+    "products": [
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRN6RWfmWMZJ",
+        "name": "Bengaluru Airport (BLR) to Bengaluru Round-Trip Transfer",
+        "slug": "prn6rwfmwmzj-bengaluru-airport-blr-to-bengaluru-round-trip-transfer",
+        "shortDescription": "Book your private transfer from Bengaluru Kempegowda Airport (BLR) to Bengaluru and return",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 32381.34,
+          "currency": "INR",
+          "publicAmount": 32381.34
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/473048143.jpg?k=57dcda3ac624c1d2a666e7e5d8533e085530dd7e152779e20d553a2704569379&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OI4PVKJvRUS7"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIjeCLKZHPZI"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OItUOfF8efCc"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OI2luP0Rnctq"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIQCytKQDs5A"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIVfvbjesEc9"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIXjjB1E1jL7"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIy0GLgwBXRr"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIMSg5bMxEme"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRYEsQeUJebw",
+        "name": "A Throbbing Walk thro Palace/Temples/Fort/Market in Old Bangalore",
+        "slug": "pryesqeujebw-a-throbbing-walk-thro-palacetemplesfortmarket-in-old-bangalore",
+        "shortDescription": "The old Bangalore Walk dissects the most throbbing & the oldest part of the city. On this Walk, y...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 3341.92,
+          "currency": "INR",
+          "publicAmount": 3341.92
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/369834799.jpg?k=be0ebd6486315118cfa18647ccb446bb1ed8a37fcfbaa472cee49a6f27b2ea61&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 11
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIeB1EqvjxVi"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIqCTyVBh7NJ"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor1Traveler",
+            "value": true,
+            "rank": 4
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRps5ArAf4ol",
+        "name": "Tipu Palace + Koté Vishnu + Fort + KR Market + Jain Temple = Bengaluru Pété Walk",
+        "slug": "prps5araf4ol-tipu-palace-kote-vishnu-fort-kr-market-jain-temple-bengaluru-pete-w",
+        "shortDescription": "The Bangalore Pété walk packs art, architecture, religion, history, colors, culture, aromas, cuis...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 5141.58,
+          "currency": "INR",
+          "publicAmount": 5141.58
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/369808738.jpg?k=bd7cb2ad236819e5193cab497301d1546833fa11086cd9eaf2dfd2e172ce92ae&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 31
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIsXFTSSjbGK"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRqFJEj6r2mk",
+        "name": "Majestic Mysore: Private Day Tour of Mysore from Bengalore!",
+        "slug": "prqfjej6r2mk-majestic-mysore-private-day-tour-of-mysore-from-bengalore",
+        "shortDescription": "Embark on a private cultural journey from Bangalore to Mysore — a city steeped in royal heritage ...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 19179.71,
+          "currency": "INR",
+          "publicAmount": 23974.64
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/339575441.jpg?k=52f31bd9e8ee3fc8ba2f17ea78a552710e91b35227db973dcad3ee043d868808&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 3
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIfEhPF9BOH2"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIOFM15hF7o3"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIg9LK28kWHr"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIbWUROipkBd"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIJrPUOjsgqL"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIxUOTcRabk2"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor2Travelers",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRdXrwdMbnlS",
+        "name": "Wild Life Jeep Safari Tour at Bannerghatta with Private Transfer",
+        "slug": "prdxrwdmbnls-bannerghatta-park-day-tour-safari-with-private-transfer",
+        "shortDescription": "Escape the city bustle for the thrill of the wild! Our safari tour offers a fantastic opportunity...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 6685.92,
+          "currency": "INR",
+          "publicAmount": 6685.92
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/440224561.jpg?k=7f3ccc138706d3b3042b546b3271b669c6dae9183799d41f3c74d25a0d8da622&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 4.7,
+            "total": 3
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIZebHT7iH5K"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI5M8gQ4aEGf"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor3Travelers",
+            "value": true,
+            "rank": 3
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRzsC1l3sFoL",
+        "name": "Same Day Taj Mahal/Agra Tour from Bangalore By Return Flights",
+        "slug": "przsc1l3sfol-agra-city-tour",
+        "shortDescription": "Experience the marvel of the Taj Mahal and the historic Agra Fort in just one day with this conve...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 15864.08,
+          "currency": "INR",
+          "publicAmount": 15864.08
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/579802969.jpg?k=02c27890886c53143f7b8dce4af3417d1096e895809005e7d1f9eb61b7856b04&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIODisFMoAmc"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIPJhxNibLD2"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIZMvcrWiyrG"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIiLsJKKtg7D"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIznGgYMWCDu"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIVVsD3qDuWL"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OILpKxd8Fw2K"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIaXSfILXxMn"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI7BFrCG41XW"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIy4sE68VBWK"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIQwcliqWVPO"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRur0LY9vzeR",
+        "name": "Enchanting Train Journey to Mysore & back; Visits by Walk/TukTuk",
+        "slug": "prur0ly9vzer-enchanting-train-journey-to-mysore-back-visits-by-walktuktuk",
+        "shortDescription": "This tour is ideal for those who wish to visit Mysore from Bangalore in a day but want to avoid t...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 14398.28,
+          "currency": "INR",
+          "publicAmount": 14398.28
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/369870661.jpg?k=969bca807d7b3bf0c26abcde7a037c386f23fb83d6bed305a04f0d9215eb97a6&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIuCLqAdgyu0"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OImTwP4oB1tw"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRKG5zY4tQVH",
+        "name": "Walk of Divinity Bangalore",
+        "slug": "prkg5zy4tqvh-walk-of-divinity-bangalore",
+        "shortDescription": "Explore the historic and renowned temples in and around the city to enrich your travel experience...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 1643.98,
+          "currency": "INR",
+          "publicAmount": 1643.98
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/368934857.jpg?k=e5c3999b0124b3d3041faeb65e1d5de047739a5554efd4a535fdb8d4aa49a520&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIaA1ZimttKm"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIhlfvws37xq"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI8tiMUsaHgA"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIIUX1VI8HWm"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIHj9fbqFKSe"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI6jEjsHz9nn"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRiGKYG2bii9",
+        "name": "Affordable Bangalore Airport Transfer",
+        "slug": "prigkyg2bii9-affordable-bangalore-airport-transfer",
+        "shortDescription": "We provide you with the most convenient and affordable airport transfer from Bangalore Airport to...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 2467.75,
+          "currency": "INR",
+          "publicAmount": 2467.75
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/388604626.jpg?k=50801ad03c6dd64965b2f97e9641d923d833ff0e580e9c077924219d27f68147&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 2.7,
+            "total": 14
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OI5yFYPeDoCV"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIMbvrgpGfph"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRvPy5XQuaOq",
+        "name": "Private Full-Day Bangalore City Tour with Guide",
+        "slug": "prvpy5xquaoq-private-full-day-shopping-tour-in-agra",
+        "shortDescription": "Discover Bangalore on a private guided tour covering major landmarks like the Bull Temple, Bangal...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 13220.07,
+          "currency": "INR",
+          "publicAmount": 13220.07
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/574553958.jpg?k=79c6a5f2326b1f6e624cd90b045573621bb03bb4737d9d5e990de484e340ceff&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIjYFGINTnRL"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRfUCztVGy7V",
+        "name": "From Bengaluru: Private Tour Sravanbelgola, Belur & Halebidu",
+        "slug": "prfucztvgy7v-from-bengaluru-private-tour-sravanbelgola-belur-halebidu",
+        "shortDescription": "Discover Karnataka’s rich spiritual and architectural legacy on this full-day private tour from B...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 25240.84,
+          "currency": "INR",
+          "publicAmount": 31551.04
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/392482992.jpg?k=306bf2f419765d8d4322e6694af56b65adb97eeb1236f943620e0ba76b0b89b2&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OII0Awwt9wmQ"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIsLc8o0Hajk"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIDma2JHZwzN"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIrc53c6hZJ9"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIyPu48uiDIV"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIhcFh1RXoBi"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIAng392MAE9"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIYunSBSBQ7X"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIzP1eK65igb"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRQml605EgE2",
+        "name": "Private Day Tour: Explore Mysore from Bangalore with Local Guide",
+        "slug": "prqml605ege2-same-day-taj-mahal-tour-from-delhi",
+        "shortDescription": "Embark on a private Bangalore to Mysore tour with an A/C vehicle, experienced driver, and English...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 22033.44,
+          "currency": "INR",
+          "publicAmount": 22033.44
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/562581259.jpg?k=e648ff2c48ccba2581c31581e27ee9944b007a6217a08ad03aa58faf611aba5e&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIfuTjIuZWdx"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRepw6aMBh39",
+        "name": "Bangalore Full Day Sightseeing in Private Cab",
+        "slug": "prepw6ambh39-bangalore-full-day-sightseeing-in-private-cab",
+        "shortDescription": "8 hours tour to discover Bangalore’s famous gardens, magnificent architecture and historic monume...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 4781.44,
+          "currency": "INR",
+          "publicAmount": 4781.44
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/368926237.jpg?k=80ef0af53f7884841f078332501d8c274eebdf217ea662567b24e56a773f33f5&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 3,
+            "total": 2
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIS3DoC8IHsA"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OILtmyW5Xok2"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor3Travelers",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRfrUfl4wyVk",
+        "name": "Bangalore in a Day: Private Guided Full-Day Sightseeing Tour",
+        "slug": "prfrufl4wyvk-bangalore-in-a-day-private-guided-full-day-sightseeing-tour",
+        "shortDescription": "Embark on a personalized private guided tour of Bangalore city's major landmarks such as the Bull...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 12277.92,
+          "currency": "INR",
+          "publicAmount": 12277.92
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https: //q-xx.bstatic.com/xdata/images/xphoto/300x320/395739817.jpg?k=2e553bb1da9095b9dc0cc1d7184e65672ecc33c3f57db3d836c551612d9537b4&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 2
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIFhhfxPoxgt"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIhA8DeSUwiN"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor2Travelers",
+            "value": true,
+            "rank": 4
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PReDwNYEPl6K",
+        "name": "Day Tour Taj Mahal From Bengaluru",
+        "slug": "predwnyepl6k-day-tour-taj-mahal-from-bangalore",
+        "shortDescription": "Day Tour Taj Mahal from Bengaluru \n\nThose Corporate and business travelers who visit Bengaluru, c...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 94215,
+          "currency": "INR",
+          "publicAmount": 94215
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/559771011.jpg?k=65360d3495d2813a1290a5fa6bda1329292f84f057d716dcc8269fe009ecfd22&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIAQOvPrLAcX"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PReiZhTKti5i",
+        "name": "Food Walk Tour Bangalore",
+        "slug": "preizhtkti5i-bangalore-food-walking-tour",
+        "shortDescription": "Indulge your taste buds in the vibrant and flavorful food culture of Bangalore with our specially...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 3085.57,
+          "currency": "INR",
+          "publicAmount": 3085.57
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/370405637.jpg?k=7aef13e460372cef113e12d486db892dd2b5078c862ca6d421df766940c21fc9&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 2,
+            "total": 1
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIc5fa67yTXk"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI3UrU4TSTcx"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIYEuuaxR2rJ"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor1Traveler",
+            "value": true,
+            "rank": 7
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRIWdyrPn7fP",
+        "name": "Mysore Full day Private Tour with Guide and Lunch from Bangalore",
+        "slug": "priwdyrpn7fp-mysore-full-day-private-tour-with-guide-and-lunch-from-bangalore",
+        "shortDescription": "our tour apart is an immersive journey through Mysore’s most iconic landmarks, paired with insigh...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 21596.9,
+          "currency": "INR",
+          "publicAmount": 21596.9
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/400670308.jpg?k=049a36f58042dc08b56ed5b31a6061f8003b22df2398e7b0bb2b1e366e4d32d9&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 1
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIPlaAD7UBYk"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIzzsjv5Unx5"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIN0tbtnXIpe"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OI8iozXnt42s"
+              },
+              {
+                "__typename": "OfferItem",
+                "id": "OIl0kYKpIM32"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor1Traveler",
+            "value": true,
+            "rank": 11
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRFOpvg5kJqF",
+        "name": "Day trip from Bangalore to Mysore, Somnathapura & Srirangapatna",
+        "slug": "prfopvg5kjqf-mysore-palacesomnathpursrirangapatnafortlunchmysore-day-tour",
+        "shortDescription": "Mysore is the Cultural capital of Karnataka and is a must-visit if you can take a day off in Bang...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 6170.1,
+          "currency": "INR",
+          "publicAmount": 6170.1
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/369827563.jpg?k=7422e37420271bd465640d2476b3e217946fe4b2020eb4a772f63e46d4c7cb73&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 3
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIsfm9JlHcUF"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OI2NGlFR7ZSl"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIUwefB2N7Cb"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor3Travelers",
+            "value": true,
+            "rank": 5
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRia8CcGLFg1",
+        "name": "Lalbagh Botanical Garden Early Morning Walk + Breakfast at MTR",
+        "slug": "pria8ccglfg1-lalbagh-botanical-garden-early-morning-walk-breakfast-at-mtr",
+        "shortDescription": "Lalbagh Botanical Gardens present an oasis of fresh air in the midst of chaotic traffic of Bangal...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 6170.1,
+          "currency": "INR",
+          "publicAmount": 6170.1
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/369834329.jpg?k=5028b54044fe6b0c76a834a4018e98f9e3db3c099de711819552ea15e8a0528e&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 1
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIvulj5vXMts"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor2Travelers",
+            "value": true,
+            "rank": 10
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PR6zDoZ1JKlp",
+        "name": "Belur and Halebidu Private Day Tour with Guide,Entrances & AC Car",
+        "slug": "pr6zdoz1jklp-belur-and-halebidu-private-day-tour-with-guideentrances-ac-car",
+        "shortDescription": "Embark on an enchanting Private Guided Day Tour from Bangalore to Halebidu and Belur, immersing y...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 20465.63,
+          "currency": "INR",
+          "publicAmount": 20465.63
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/395743287.jpg?k=d6885860193459a6cc6890efa9666e232d1550defe1a6e5746bb34d29a5fd2a3&o="
+        },
+        "reviewsStats": {
+          "__typename": "AttractionsProductReviewStats",
+          "allReviewsCount": 0,
+          "percentage": "0",
+          "combinedNumericStats": {
+            "__typename": "AttractionsProductCombinedReviewStats",
+            "average": 5,
+            "total": 1
+          }
+        },
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIb1tjHn4aev"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIKBZJxrxQYU"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesAdmissionIncluded",
+            "value": true,
+            "rank": 0
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "__typename": "AttractionsProduct",
+        "cancellationPolicy": {
+          "__typename": "AttractionsCancellationPolicy",
+          "hasFreeCancellation": true
+        },
+        "id": "PRW6mJ3Xcukl",
+        "name": "Day Trip to Mysore (Guided Private Sightseeing Experience from Bangalore)",
+        "slug": "prw6mj3xcukl-day-trip-to-mysore-guided-private-sightseeing-experience-from-banga",
+        "shortDescription": "Join us for a fully guided day trip to Mysore, where you'll discover ornate Wodeyar palaces like ...",
+        "representativePrice": {
+          "__typename": "AttractionsPrice",
+          "chargeAmount": 12340.2,
+          "currency": "INR",
+          "publicAmount": 12340.2
+        },
+        "primaryPhoto": {
+          "__typename": "AttractionsPhoto",
+          "small": "https: //q-xx.bstatic.com/xdata/images/xphoto/300x320/369790891.jpg?k=cf90fbd671260bf11c5a0a9226ccc0af4a0034d4e043c361f1802a1b06dcf0cf&o="
+        },
+        "reviewsStats": null,
+        "ufiDetails": {
+          "__typename": "AttractionLocationResponse",
+          "bCityName": "Devanahalli-Bangalore",
+          "ufi": -2094401,
+          "url": {
+            "__typename": "AttractionLocationUrl",
+            "country": "in"
+          }
+        },
+        "offers": [
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OI3aVfYvTmz1"
+              }
+            ]
+          },
+          {
+            "__typename": "Offer",
+            "items": [
+              {
+                "__typename": "OfferItem",
+                "id": "OIoh7J7izvwv"
+              }
+            ]
+          }
+        ],
+        "supportedFeatures": {
+          "__typename": "AttractionsProductSupportedFeatures",
+          "nativeApp": true
+        },
+        "flags": [
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "popularFor3Travelers",
+            "value": true,
+            "rank": 2
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesExpertGuide",
+            "value": true,
+            "rank": 1
+          },
+          {
+            "__typename": "AttractionsProductFlags",
+            "flag": "aiBadgesPickup",
+            "value": true,
+            "rank": 2
+          }
+        ]
+      }
+    ],
+    "filterStats": {
+      "__typename": "FilterStats",
+      "unfilteredProductCount": 215,
+      "filteredProductCount": 215
+    },
+    "sorters": [
+      {
+        "__typename": "AttractionsSorterOption",
+        "name": "Our top picks",
+        "value": "trending"
+      },
+      {
+        "__typename": "AttractionsSorterOption",
+        "name": "Lowest price",
+        "value": "lowest_price"
+      },
+      {
+        "__typename": "AttractionsSorterOption",
+        "name": "Best reviewed",
+        "value": "highest_weighted_rating"
+      }
+    ],
+    "defaultSorter": {
+      "__typename": "AttractionsSorterOption",
+      "name": "Our top picks",
+      "value": "trending"
+    },
+    "filterOptions": {
+      "__typename": "FilterOptions",
+      "typeFilters": [
+        {
+          "__typename": "FilterOption",
+          "name": "Tours",
+          "tagname": "PTCMCuXtHgrC",
+          "productCount": 189
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Museums, arts & culture",
+          "tagname": "PTCMCcodv3rh",
+          "productCount": 148
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Nature & outdoor",
+          "tagname": "PTCMCLfBZQwO",
+          "productCount": 40
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Entertainment & tickets",
+          "tagname": "PTCMCgNr9fWb",
+          "productCount": 21
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Food & drink",
+          "tagname": "PTCMCi9PTIPL",
+          "productCount": 16
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Services & rentals",
+          "tagname": "PTCMCowbPYbZ",
+          "productCount": 13
+        },
+        {
+          "__typename": "FilterOption",
+          "name": "Workshops & classes",
+          "tagname": "PTCMClxjwGcP",
+          "productCount": 9
+        }
+      ],
+      "labelFilters": [
+        {
+          "__typename": "FilterOption",
+          "name": "Free cancellation",
+          "tagname": "free_cancellation",
+          "productCount": 182
+        }
+      ],
+      "ufiFilters": [
+        {
+          "__typename": "FilterOption",
+          "name": "Devanahalli-Bangalore",
+          "tagname": "-2094401",
+          "productCount": 215
+        }
+      ],
+      "priceFilters": null
+    }
+  }
+}

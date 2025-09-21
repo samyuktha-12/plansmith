@@ -1,0 +1,67 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1758447507079,
+  "data": [
+    {
+      "city": "Bengaluru",
+      "name": "Lotnisko Bengaluru",
+      "latitude": 13.2,
+      "description": null,
+      "longitude": 77.709,
+      "iata": "BLR",
+      "country": "Indie",
+      "types": "airport",
+      "countryCode": "in",
+      "googlePlaceId": "ChIJZWJEdf4crjsRjkEpoelwbCk"
+    },
+    {
+      "country": "India",
+      "types": "hotel",
+      "countryCode": "in",
+      "googlePlaceId": "ChIJ6y7DQZsWrjsRHRqmic9avtc",
+      "city": "Bangalore",
+      "name": "Conrad Bengaluru",
+      "latitude": 12.975242,
+      "iata": null,
+      "description": null,
+      "longitude": 77.620895
+    },
+    {
+      "countryCode": "in",
+      "types": "hotel",
+      "googlePlaceId": "ChIJy4CDKAofrjsRCY6lMqZYwk8",
+      "country": "India",
+      "description": null,
+      "longitude": 77.64648,
+      "iata": null,
+      "name": "Bloom Hotel - Bengaluru Airport",
+      "city": "Devanahalli-Bangalore",
+      "latitude": 13.19169
+    },
+    {
+      "iata": null,
+      "longitude": 77.61949,
+      "description": null,
+      "latitude": 12.976252,
+      "name": "Radisson Bengaluru City Center",
+      "city": "Bangalore",
+      "googlePlaceId": "ChIJkxW51JoWrjsRSqYJpdBqNKI",
+      "types": "hotel",
+      "countryCode": "in",
+      "country": "India"
+    },
+    {
+      "country": "India",
+      "types": "hotel",
+      "countryCode": "in",
+      "googlePlaceId": "ChIJ_TYtZQYUrjsRZZOUhyRvBm0",
+      "city": "Bangalore",
+      "name": "The Leela Palace Bengaluru",
+      "latitude": 12.960565,
+      "iata": null,
+      "longitude": 77.64848,
+      "description": null
+    }
+  ]
+}
