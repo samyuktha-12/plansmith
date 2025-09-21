@@ -95,3 +95,13 @@ flutter:
     - family: Sacramento
       fonts:
         - asset: assets/fonts/Sacramento-Regular.ttf
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand-Medium.ttf
+        - asset: assets/fonts/Quicksand-SemiBold.ttf
+        - asset: assets/fonts/Quicksand-Bold.ttf
+        - asset: assets/fonts/Quicksand-Light.ttf
+    - family: StyleScript
+      fonts:
+        - asset: assets/fonts/StyleScript-Regular.ttf
