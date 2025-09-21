@@ -85,56 +85,6 @@ PlanSmith is an intelligent travel planning application that leverages AI to cre
 - **Weather APIs**: Real-time weather data
 - **Event APIs**: Local events and activities
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Flutter SDK** (3.8.1 or higher)
-- **Dart SDK** (3.0.0 or higher)
-- **Python** (3.9 or higher)
-- **Node.js** (for development tools)
-- **Git** (for version control)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/plansmith.git
-   cd plansmith
-   ```
-
-2. **Set up the Flutter app**
-   ```bash
-   cd plansmith
-   flutter pub get
-   flutter doctor
-   ```
-
-3. **Set up the backend**
-   ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-4. **Configure environment variables**
-   ```bash
-   cp backend/env_example.txt backend/.env
-   # Edit backend/.env with your API keys
-   ```
-
-5. **Run the application**
-   ```bash
-   # Terminal 1: Start the backend
-   cd backend
-   python main.py
-   
-   # Terminal 2: Start the Flutter app
-   cd plansmith
-   flutter run
-   ```
-
 ## 📱 Mobile App Features
 
 ### 🏠 Home Screen
@@ -178,75 +128,10 @@ PlanSmith is an intelligent travel planning application that leverages AI to cre
 - JWT token validation
 - User profile management
 
-## 🎨 Design System
-
-### Colors
-- **Primary**: `#0E4F55` (Teal)
-- **Secondary**: `#FF6B6B` (Coral)
-- **Accent**: `#4ECDC4` (Mint)
-- **Background**: `#F8F9FA` (Light Gray)
-
-### Typography
-- **Primary Font**: Quicksand (Regular, Medium, SemiBold, Bold)
-- **Display Font**: Sacramento (Script)
-- **Accent Font**: StyleScript (Handwriting)
-
-### Components
-- Material Design 3 components
-- Custom card designs
-- Animated transitions
-- Responsive layouts
-
-## 📊 Project Structure
-
-```
-plansmith/
-├── plansmith/                 # Flutter mobile app
-│   ├── lib/
-│   │   ├── screens/          # UI screens
-│   │   ├── widgets/          # Reusable components
-│   │   ├── services/         # API services
-│   │   ├── models/           # Data models
-│   │   └── constants/        # App constants
-│   ├── assets/               # Images, fonts, videos
-│   └── pubspec.yaml         # Flutter dependencies
-├── backend/                  # Python FastAPI backend
-│   ├── api/                 # API routes
-│   ├── services/            # Business logic
-│   ├── models/              # Data models
-│   └── requirements.txt     # Python dependencies
-└── README.md               # This file
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- **Google Cloud Platform** for AI and mapping services
-- **Flutter Team** for the amazing cross-platform framework
-- **FastAPI** for the modern Python web framework
-- **Firebase** for backend services
-- **Unsplash** for beautiful travel images
-
-## 📞 Support
-
-- **Documentation**: [Wiki](https://github.com/yourusername/plansmith/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/plansmith/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/plansmith/discussions)
-- **Email**: support@plansmith.app
 
 ## 🗺️ Roadmap
 
