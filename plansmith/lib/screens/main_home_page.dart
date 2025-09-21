@@ -723,32 +723,38 @@ class _MainHomePageState extends State<MainHomePage> {
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(16),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withOpacity(0.1),
-                                        blurRadius: 8,
-                                        offset: const Offset(0, 2),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        'Trip detail >',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand',
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w600,
-                                          color: const Color(0xFF0E4F55),
+                                GestureDetector(
+                                  onTap: () {
+                                    // Navigate to destination details
+                                    Navigator.pushNamed(context, '/destination');
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(16),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black.withOpacity(0.1),
+                                          blurRadius: 8,
+                                          offset: const Offset(0, 2),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Text(
+                                          'Trip detail >',
+                                          style: TextStyle(
+                                            fontFamily: 'Quicksand',
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color: const Color(0xFF0E4F55),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -859,6 +865,18 @@ class _MainHomePageState extends State<MainHomePage> {
         ),
       ),
       
+      // Floating Action Button for Expenses
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/expenses');
+        },
+        backgroundColor: const Color(0xFF0E4F55),
+        foregroundColor: Colors.white,
+        elevation: 0,
+        child: const Icon(Icons.account_balance_wallet_rounded),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      
     );
   }
 
@@ -915,7 +933,10 @@ class _MainHomePageState extends State<MainHomePage> {
     print('Building card for $country with image: $imageUrl'); // Debug print
     
     return GestureDetector(
-      onTap: () => _showSnackbar('Explore $country - Coming soon!'),
+      onTap: () {
+        // Navigate to destination details
+        Navigator.pushNamed(context, '/destination');
+      },
       child: Container(
       width: 160,
       height: 140,
@@ -1105,31 +1126,37 @@ class _MainHomePageState extends State<MainHomePage> {
 
   Widget _buildNavItem(IconData icon, String label, int index, bool isSelected, {bool isSpecial = false}) {
     if (isSpecial) {
-      return Container(
-        width: 56,
-        height: 56,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              const Color(0xFF0E4F55),
-              const Color(0xFF0E4F55).withOpacity(0.8),
+      return GestureDetector(
+        onTap: () {
+          // Navigate to destination details screen
+          Navigator.pushNamed(context, '/destination');
+        },
+        child: Container(
+          width: 56,
+          height: 56,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                const Color(0xFF0E4F55),
+                const Color(0xFF0E4F55).withOpacity(0.8),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(28),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF0E4F55).withOpacity(0.3),
+                blurRadius: 16,
+                offset: const Offset(0, 6),
+              ),
             ],
           ),
-          borderRadius: BorderRadius.circular(28),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFF0E4F55).withOpacity(0.3),
-              blurRadius: 16,
-              offset: const Offset(0, 6),
-            ),
-          ],
-        ),
-        child: Icon(
-          icon,
-          color: Colors.white,
-          size: 26,
+          child: Icon(
+            icon,
+            color: Colors.white,
+            size: 26,
+          ),
         ),
       );
     }
@@ -1139,6 +1166,25 @@ class _MainHomePageState extends State<MainHomePage> {
         setState(() {
           _selectedIndex = index;
         });
+        
+        // Navigate to different screens based on index
+        switch (index) {
+          case 0:
+            // Home - already here
+            break;
+          case 1:
+            // Explore - navigate to creator zone
+            Navigator.pushNamed(context, '/creator');
+            break;
+          case 3:
+            // Trip - navigate to itinerary
+            Navigator.pushNamed(context, '/itinerary');
+            break;
+          case 4:
+            // Profile - navigate to profile
+            Navigator.pushNamed(context, '/profile');
+            break;
+        }
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
