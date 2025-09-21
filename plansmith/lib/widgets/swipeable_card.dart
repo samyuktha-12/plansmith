@@ -334,114 +334,143 @@ class ActivityCard extends StatelessWidget {
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
-              image: activity['image_url'] != null
-                  ? DecorationImage(
-                      image: NetworkImage(activity['image_url']),
-                      fit: BoxFit.cover,
-                    )
-                  : null,
-              color: activity['image_url'] == null ? AppColors.grey200 : null,
+              color: AppColors.grey200,
             ),
-            child: Stack(
-              children: [
-                // Gradient overlay for better text readability
-                if (activity['image_url'] != null)
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          Colors.transparent,
-                          Colors.black.withOpacity(0.3),
-                        ],
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+              child: Stack(
+                children: [
+                  // Image with error handling
+                  if (activity['image_url'] != null)
+                    Image.network(
+                      activity['image_url'],
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          color: AppColors.grey200,
+                          child: const Center(
+                            child: Icon(
+                              Icons.explore,
+                              size: 50,
+                              color: AppColors.grey500,
+                            ),
+                          ),
+                        );
+                      },
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) return child;
+                        return Container(
+                          color: AppColors.grey200,
+                          child: const Center(
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  
+                  // Fallback icon when no image URL
+                  if (activity['image_url'] == null)
+                    const Center(
+                      child: Icon(
+                        Icons.explore,
+                        size: 50,
+                        color: AppColors.grey500,
                       ),
                     ),
-                  ),
-                
-                // Category badge
-                Positioned(
-                  top: 16,
-                  left: 16,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: AppColors.primary,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.primary.withOpacity(0.3),
-                          blurRadius: 8,
-                          offset: const Offset(0, 2),
+                  
+                  // Gradient overlay for better text readability
+                  if (activity['image_url'] != null)
+                    Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.transparent,
+                            Colors.black.withOpacity(0.3),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: Text(
-                      activity['category'] ?? 'Activity',
-                      style: const TextStyle(
-                        color: AppColors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0.5,
                       ),
                     ),
-                  ),
-                ),
-                
-                // Rating badge
-                if (activity['rating'] != null)
+                  
+                  // Category badge
                   Positioned(
                     top: 16,
-                    right: 16,
+                    left: 16,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: AppColors.white.withOpacity(0.9),
-                        borderRadius: BorderRadius.circular(12),
+                        color: AppColors.primary,
+                        borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 4,
+                            color: AppColors.primary.withOpacity(0.3),
+                            blurRadius: 8,
                             offset: const Offset(0, 2),
                           ),
                         ],
                       ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: AppColors.warning,
-                            size: 14,
-                          ),
-                          const SizedBox(width: 2),
-                          Text(
-                            activity['rating'].toString(),
-                            style: const TextStyle(
-                              color: AppColors.textPrimary,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
+                      child: Text(
+                        activity['category'] ?? 'Activity',
+                        style: const TextStyle(
+                          color: AppColors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.5,
+                        ),
                       ),
                     ),
                   ),
-                
-                // Fallback icon
-                if (activity['image_url'] == null)
-                  const Center(
-                    child: Icon(
-                      Icons.explore,
-                      size: 50,
-                      color: AppColors.grey500,
+                  
+                  // Rating badge
+                  if (activity['rating'] != null)
+                    Positioned(
+                      top: 16,
+                      right: 16,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: AppColors.white.withOpacity(0.9),
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 4,
+                              offset: const Offset(0, 2),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: AppColors.warning,
+                              size: 14,
+                            ),
+                            const SizedBox(width: 2),
+                            Text(
+                              activity['rating'].toString(),
+                              style: const TextStyle(
+                                color: AppColors.textPrimary,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
           ),
           
@@ -492,30 +521,32 @@ class ActivityCard extends StatelessWidget {
                       width: 1,
                     ),
                   ),
-                  child: Row(
-                    children: [
-                      // Duration
-                      Expanded(
-                        child: _buildDetailItem(
-                          Icons.access_time,
-                          '${activity['duration_hours'] ?? 2} hrs',
-                          AppColors.info,
+                  child: IntrinsicHeight(
+                    child: Row(
+                      children: [
+                        // Duration
+                        Expanded(
+                          child: _buildDetailItem(
+                            Icons.access_time,
+                            '${activity['duration_hours'] ?? 2} hrs',
+                            AppColors.info,
+                          ),
                         ),
-                      ),
-                      Container(
-                        width: 1,
-                        height: 30,
-                        color: AppColors.border,
-                      ),
-                      // Cost
-                      Expanded(
-                        child: _buildDetailItem(
-                          Icons.currency_rupee,
-                          '₹${activity['cost_per_person'] ?? 500}',
-                          AppColors.success,
+                        Container(
+                          width: 1,
+                          height: 30,
+                          color: AppColors.border,
                         ),
-                      ),
-                    ],
+                        // Cost
+                        Expanded(
+                          child: _buildDetailItem(
+                            Icons.currency_rupee,
+                            '₹${activity['cost_per_person'] ?? 500}',
+                            AppColors.success,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 
@@ -845,44 +876,48 @@ class FlightCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Flight details
-                Row(
-                  children: [
-                    Expanded(
-                      child: _buildFlightDetail(
-                        'Departure',
-                        flight['departure_time'] ?? 'N/A',
-                        Icons.flight_takeoff,
+                IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _buildFlightDetail(
+                          'Departure',
+                          flight['departure_time'] ?? 'N/A',
+                          Icons.flight_takeoff,
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      child: _buildFlightDetail(
-                        'Arrival',
-                        flight['arrival_time'] ?? 'N/A',
-                        Icons.flight_land,
+                      Expanded(
+                        child: _buildFlightDetail(
+                          'Arrival',
+                          flight['arrival_time'] ?? 'N/A',
+                          Icons.flight_land,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 
                 const SizedBox(height: AppStyles.spacing16),
                 
-                Row(
-                  children: [
-                    Expanded(
-                      child: _buildFlightDetail(
-                        'Duration',
-                        flight['duration'] ?? 'N/A',
-                        Icons.access_time,
+                IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _buildFlightDetail(
+                          'Duration',
+                          flight['duration'] ?? 'N/A',
+                          Icons.access_time,
+                        ),
                       ),
-                    ),
-                    Expanded(
-                      child: _buildFlightDetail(
-                        'Aircraft',
-                        flight['aircraft'] ?? 'N/A',
-                        Icons.flight,
+                      Expanded(
+                        child: _buildFlightDetail(
+                          'Aircraft',
+                          flight['aircraft'] ?? 'N/A',
+                          Icons.flight,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 
                 const SizedBox(height: AppStyles.spacing16),
@@ -1043,7 +1078,9 @@ class RestaurantCard extends StatelessWidget {
                 const SizedBox(height: AppStyles.spacing8),
                 
                 // Cuisine and Price Range
-                Row(
+                Wrap(
+                  spacing: AppStyles.spacing8,
+                  runSpacing: AppStyles.spacing4,
                   children: [
                     Container(
                       padding: const EdgeInsets.symmetric(
@@ -1062,7 +1099,6 @@ class RestaurantCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: AppStyles.spacing8),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: AppStyles.spacing8,

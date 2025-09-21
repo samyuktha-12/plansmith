@@ -98,46 +98,47 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
               
-              // Menu options
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Column(
-                  children: [
-                    _buildMenuOption(
-                      Icons.search_rounded,
-                      'Search Destinations',
-                      'Find your next adventure',
-                      () => _showSnackbar('Search functionality coming soon!'),
-                    ),
-                    _buildMenuOption(
-                      Icons.bookmark_rounded,
-                      'Saved Places',
-                      'View your bookmarked locations',
-                      () => _showSnackbar('Saved places feature coming soon!'),
-                    ),
-                    _buildMenuOption(
-                      Icons.history_rounded,
-                      'Recent Trips',
-                      'See your travel history',
-                      () => _showSnackbar('Recent trips feature coming soon!'),
-                    ),
-                    _buildMenuOption(
-                      Icons.settings_rounded,
-                      'Settings',
-                      'Customize your experience',
-                      () => _showSnackbar('Settings page coming soon!'),
-                    ),
-                    _buildMenuOption(
-                      Icons.help_rounded,
-                      'Help & Support',
-                      'Get assistance and support',
-                      () => _showSnackbar('Help & support coming soon!'),
-                    ),
-                  ],
+              // Menu options - Made scrollable to prevent overflow
+              Flexible(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    children: [
+                      _buildMenuOption(
+                        Icons.search_rounded,
+                        'Search Destinations',
+                        'Find your next adventure',
+                        () => _showSnackbar('Search functionality coming soon!'),
+                      ),
+                      _buildMenuOption(
+                        Icons.bookmark_rounded,
+                        'Saved Places',
+                        'View your bookmarked locations',
+                        () => _showSnackbar('Saved places feature coming soon!'),
+                      ),
+                      _buildMenuOption(
+                        Icons.history_rounded,
+                        'Recent Trips',
+                        'See your travel history',
+                        () => _showSnackbar('Recent trips feature coming soon!'),
+                      ),
+                      _buildMenuOption(
+                        Icons.settings_rounded,
+                        'Settings',
+                        'Customize your experience',
+                        () => _showSnackbar('Settings page coming soon!'),
+                      ),
+                      _buildMenuOption(
+                        Icons.help_rounded,
+                        'Help & Support',
+                        'Get assistance and support',
+                        () => _showSnackbar('Help & support coming soon!'),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
+                  ),
                 ),
               ),
-              
-              const SizedBox(height: 24),
             ],
           ),
         );
@@ -268,10 +269,14 @@ class _MainHomePageState extends State<MainHomePage> {
       key: _scaffoldKey,
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.only(bottom: 100), // Add padding for bottom nav and FAB
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
               // Header Section
               Container(
                 padding: const EdgeInsets.fromLTRB(AppStyles.spacing20, AppStyles.spacing16, AppStyles.spacing20, AppStyles.spacing20),
@@ -877,7 +882,7 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
               
-              const SizedBox(height: 28),
+              const SizedBox(height: 20),
               
               // Most Popular Trip Section
               Padding(
@@ -929,11 +934,14 @@ class _MainHomePageState extends State<MainHomePage> {
                 ),
               ),
               
-              const SizedBox(height: 100), // Space for bottom navigation
+              const SizedBox(height: 16), // Reduced space to prevent overflow
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
-      ),
       
       // Bottom Navigation Bar
       bottomNavigationBar: Container(

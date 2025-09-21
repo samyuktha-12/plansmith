@@ -10,7 +10,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  String userName = 'John Doe';
+  String userName = 'samyuktha';
   String userEmail = 'john.doe@example.com';
   String userAvatar = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face';
   int totalTrips = 12;
@@ -58,60 +58,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const SizedBox(height: AppStyles.spacing40),
-                      // Profile Avatar
-                      Stack(
-                        children: [
-                          CircleAvatar(
-                            radius: 50,
-                            backgroundColor: AppColors.white.withOpacity(0.2),
-                            child: CircleAvatar(
-                              radius: 45,
-                              backgroundImage: NetworkImage(userAvatar),
-                              onBackgroundImageError: (exception, stackTrace) {
-                                // Handle image error
-                              },
-                              child: const Icon(
-                                Icons.person_rounded,
-                                color: AppColors.white,
-                                size: 40,
-                              ),
-                            ),
+                      // Profile Name Display
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                        decoration: BoxDecoration(
+                          color: AppColors.white.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Text(
+                          userName,
+                          style: AppStyles.heading2.copyWith(
+                            color: AppColors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700,
                           ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: GestureDetector(
-                              onTap: () => _showEditProfileModal(),
-                              child: Container(
-                                width: 36,
-                                height: 36,
-                                decoration: BoxDecoration(
-                                  color: AppColors.white,
-                                  borderRadius: BorderRadius.circular(AppStyles.radius20),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: AppColors.shadowMedium,
-                                      blurRadius: 12,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ],
-                                ),
-                                child: const Icon(
-                                  Icons.camera_alt_rounded,
-                                  color: AppColors.primary,
-                                  size: 18,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: AppStyles.spacing12),
-                      Text(
-                        userName,
-                        style: AppStyles.heading2.copyWith(
-                          color: AppColors.white,
-                          fontSize: 22,
                         ),
                       ),
                       const SizedBox(height: AppStyles.spacing4),
@@ -563,40 +523,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 const SizedBox(height: 24),
                 
-                // Profile Picture
+                // Profile Name Display
                 Center(
-                  child: Stack(
-                    children: [
-                      CircleAvatar(
-                        radius: 60,
-                        backgroundImage: NetworkImage(userAvatar),
-                        onBackgroundImageError: (exception, stackTrace) {
-                          // Handle image error
-                        },
-                        child: const Icon(
-                          Icons.person_rounded,
-                          color: Colors.white,
-                          size: 40,
-                        ),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF0E4F55).withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: const Color(0xFF0E4F55).withOpacity(0.2),
+                        width: 2,
                       ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          width: 36,
-                          height: 36,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF0E4F55),
-                            borderRadius: BorderRadius.circular(18),
-                          ),
-                          child: const Icon(
-                            Icons.camera_alt_rounded,
-                            color: Colors.white,
-                            size: 18,
-                          ),
-                        ),
+                    ),
+                    child: Text(
+                      userName,
+                      style: const TextStyle(
+                        fontFamily: 'Quicksand',
+                        fontSize: 28,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF0E4F55),
                       ),
-                    ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 24),

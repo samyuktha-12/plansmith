@@ -177,167 +177,171 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          // Total Expenses Card
-          Container(
-            margin: const EdgeInsets.all(20),
-            padding: const EdgeInsets.all(24),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF0E4F55),
-                  Color(0xFF0E4F55),
-                ],
-              ),
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFF0E4F55).withOpacity(0.3),
-                  blurRadius: 20,
-                  offset: const Offset(0, 8),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Total Expenses',
-                      style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white.withOpacity(0.9),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.2),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        selectedPeriod,
-                        style: const TextStyle(
-                          fontFamily: 'Quicksand',
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Total Expenses Card
+            Container(
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF0E4F55),
+                    Color(0xFF0E4F55),
                   ],
                 ),
-                const SizedBox(height: 16),
-                Text(
-                  '₹${totalExpenses.toStringAsFixed(0)}',
-                  style: const TextStyle(
-                    fontFamily: 'Quicksand',
-                    fontSize: 36,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFF0E4F55).withOpacity(0.3),
+                    blurRadius: 20,
+                    offset: const Offset(0, 8),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  '${expenses.length} transactions',
-                  style: TextStyle(
-                    fontFamily: 'Quicksand',
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white.withOpacity(0.8),
+                ],
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Total Expenses',
+                        style: TextStyle(
+                          fontFamily: 'Quicksand',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white.withOpacity(0.9),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          selectedPeriod,
+                          style: const TextStyle(
+                            fontFamily: 'Quicksand',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-          ),
-
-          // Chart Section
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.08),
-                  blurRadius: 20,
-                  offset: const Offset(0, 4),
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Expense Breakdown',
-                  style: TextStyle(
-                    fontFamily: 'Quicksand',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF0E4F55),
+                  const SizedBox(height: 16),
+                  Text(
+                    '₹${totalExpenses.toStringAsFixed(0)}',
+                    style: const TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 36,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 20),
-                _buildPieChart(),
-                const SizedBox(height: 20),
-                _buildCategoryLegend(),
-              ],
-            ),
-          ),
-
-          const SizedBox(height: 20),
-
-          // Trip Photos Section
-          _buildTripPhotosSection(),
-
-          const SizedBox(height: 20),
-
-          // Expenses List Header
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'Recent Expenses',
-                  style: TextStyle(
-                    fontFamily: 'Quicksand',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF0E4F55),
-                  ),
-                ),
-                TextButton.icon(
-                  onPressed: () => _showAddExpenseModal(),
-                  icon: const Icon(
-                    Icons.add_rounded,
-                    size: 16,
-                    color: Color(0xFF0E4F55),
-                  ),
-                  label: const Text(
-                    'Add Expense',
+                  const SizedBox(height: 8),
+                  Text(
+                    '${expenses.length} transactions',
                     style: TextStyle(
                       fontFamily: 'Quicksand',
                       fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white.withOpacity(0.8),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Chart Section
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.08),
+                    blurRadius: 20,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Expense Breakdown',
+                    style: TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Color(0xFF0E4F55),
                     ),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 20),
+                  _buildPieChart(),
+                  const SizedBox(height: 20),
+                  _buildCategoryLegend(),
+                ],
+              ),
             ),
-          ),
 
-          // Expenses List
-          Expanded(
-            child: ListView.builder(
+            const SizedBox(height: 20),
+
+            // Trip Photos Section
+            _buildTripPhotosSection(),
+
+            const SizedBox(height: 20),
+
+            // Expenses List Header
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Recent Expenses',
+                    style: TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF0E4F55),
+                    ),
+                  ),
+                  TextButton.icon(
+                    onPressed: () => _showAddExpenseModal(),
+                    icon: const Icon(
+                      Icons.add_rounded,
+                      size: 16,
+                      color: Color(0xFF0E4F55),
+                    ),
+                    label: const Text(
+                      'Add Expense',
+                      style: TextStyle(
+                        fontFamily: 'Quicksand',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF0E4F55),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 16),
+
+            // Expenses List
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: 20),
               itemCount: expenses.length,
               itemBuilder: (context, index) {
@@ -345,8 +349,10 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
                 return _buildExpenseItem(expense);
               },
             ),
-          ),
-        ],
+            
+            const SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }
@@ -416,7 +422,7 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
           // Category List
           Expanded(
             flex: 3,
-            child: ListView(
+            child: Column(
               children: categoryTotals.entries.map((entry) {
                 final percentage = (entry.value / totalExpenses * 100).round();
                 final colorIndex = categoryTotals.keys.toList().indexOf(entry.key) % colors.length;
@@ -563,13 +569,16 @@ class _ExpenseTrackingScreenState extends State<ExpenseTrackingScreen> {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    Text(
-                      expense['category'],
-                      style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey.shade600,
+                    Expanded(
+                      child: Text(
+                        expense['category'],
+                        style: TextStyle(
+                          fontFamily: 'Quicksand',
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey.shade600,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     const SizedBox(width: 8),
