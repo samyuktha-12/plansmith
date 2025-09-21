@@ -829,7 +829,7 @@ class _MainHomePageState extends State<MainHomePage> {
                                       'id': 'jeju_trip',
                                       'name': 'Jeju Trip',
                                       'destination': 'Jeju Island, South Korea',
-                                      'imageUrl': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
+                                      'imageUrl': 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop',
                                       'startDate': DateTime.now().add(const Duration(days: 7)),
                                       'endDate': DateTime.now().add(const Duration(days: 14)),
                                       'members': 5,

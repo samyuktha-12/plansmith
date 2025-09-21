@@ -212,6 +212,14 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
               ),
               IconButton(
                 icon: const Icon(
+                  Icons.photo_library_rounded,
+                  color: Colors.white,
+                  size: 20,
+                ),
+                onPressed: () => _shareImages(),
+              ),
+              IconButton(
+                icon: const Icon(
                   Icons.more_vert_rounded,
                   color: Colors.white,
                   size: 20,
@@ -391,75 +399,114 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
 
   Widget _buildOverviewTab() {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Quick Stats
-          Row(
-            children: [
-              Expanded(
-                child: _buildStatCard(
-                  'Total Budget',
-                  '\$${totalBudget.toStringAsFixed(0)}',
-                  Icons.account_balance_wallet_rounded,
-                  const Color(0xFF0E4F55),
+          // Quick Stats with improved layout
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 2),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildStatCard(
-                  'Spent',
-                  '\$${totalExpenses.toStringAsFixed(0)}',
-                  Icons.trending_up_rounded,
-                  Colors.orange,
+              ],
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: _buildStatCard(
+                        'Total Budget',
+                        '₹${totalBudget.toStringAsFixed(0)}',
+                        Icons.account_balance_wallet_rounded,
+                        const Color(0xFF0E4F55),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: _buildStatCard(
+                        'Spent',
+                        '₹${totalExpenses.toStringAsFixed(0)}',
+                        Icons.trending_up_rounded,
+                        Colors.orange,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: [
-              Expanded(
-                child: _buildStatCard(
-                  'Remaining',
-                  '\$${(totalBudget - totalExpenses).toStringAsFixed(0)}',
-                  Icons.savings_rounded,
-                  Colors.green,
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    Expanded(
+                      child: _buildStatCard(
+                        'Remaining',
+                        '₹${(totalBudget - totalExpenses).toStringAsFixed(0)}',
+                        Icons.savings_rounded,
+                        (totalBudget - totalExpenses) >= 0 ? Colors.green : Colors.red,
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: _buildStatCard(
+                        'Bookings',
+                        '${bookings.length}',
+                        Icons.book_online_rounded,
+                        Colors.blue,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildStatCard(
-                  'Bookings',
-                  '${bookings.length}',
-                  Icons.book_online_rounded,
-                  Colors.blue,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
           
           const SizedBox(height: 24),
           
-          // Recent Activity
-          const Text(
-            'Recent Activity',
-            style: TextStyle(
-              fontFamily: 'Quicksand',
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF0E4F55),
+          // Recent Activity with improved layout
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 2),
+                ),
+              ],
             ),
-          ),
-          const SizedBox(height: 16),
-          
-          Expanded(
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return _buildActivityItem();
-              },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Recent Activity',
+                  style: TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF0E4F55),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: _buildActivityItem(),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -536,7 +583,7 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
                           ),
                         ),
                         Text(
-                          '\$${totalExpenses.toStringAsFixed(0)}',
+                          '₹${totalExpenses.toStringAsFixed(0)}',
                           style: const TextStyle(
                             fontFamily: 'Quicksand',
                             fontSize: 20,
@@ -559,7 +606,7 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
                           ),
                         ),
                         Text(
-                          '\$${(totalBudget - totalExpenses).toStringAsFixed(0)}',
+                          '₹${(totalBudget - totalExpenses).toStringAsFixed(0)}',
                           style: const TextStyle(
                             fontFamily: 'Quicksand',
                             fontSize: 20,
@@ -816,7 +863,7 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                '\$${expense['amount'].toStringAsFixed(0)}',
+                '₹${expense['amount'].toStringAsFixed(0)}',
                 style: const TextStyle(
                   fontFamily: 'Quicksand',
                   fontSize: 16,
@@ -1012,7 +1059,7 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
               ),
               if (activity['cost'] > 0)
                 Text(
-                  '\$${activity['cost']}',
+                  '₹${activity['cost']}',
                   style: const TextStyle(
                     fontFamily: 'Quicksand',
                     fontSize: 14,
@@ -1117,7 +1164,7 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
             ),
           ),
           Text(
-            '\$${member['contribution'].toStringAsFixed(0)}',
+            '₹${member['contribution'].toStringAsFixed(0)}',
             style: const TextStyle(
               fontFamily: 'Quicksand',
               fontSize: 16,
@@ -1172,6 +1219,151 @@ class _GroupTripDetailsScreenState extends State<GroupTripDetailsScreen> with Ti
       const SnackBar(
         content: Text('Share functionality coming soon!'),
         backgroundColor: Color(0xFF0E4F55),
+      ),
+    );
+  }
+
+  void _shareImages() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => Container(
+        height: MediaQuery.of(context).size.height * 0.7,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: Column(
+          children: [
+            // Handle bar
+            Container(
+              width: 40,
+              height: 4,
+              margin: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade300,
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+            // Header
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Row(
+                children: [
+                  const Text(
+                    'Share Images',
+                    style: TextStyle(
+                      fontFamily: 'Quicksand',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF0E4F55),
+                    ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(Icons.close_rounded),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(height: 1),
+            // Image grid
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 12,
+                    mainAxisSpacing: 12,
+                  ),
+                  itemCount: 9, // Mock images
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey.shade100,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&h=300&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              color: Colors.grey.shade200,
+                              child: const Icon(
+                                Icons.image_rounded,
+                                color: Colors.grey,
+                                size: 40,
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+            // Action buttons
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Images shared successfully!'),
+                            backgroundColor: Color(0xFF0E4F55),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.share_rounded),
+                      label: const Text('Share Selected'),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Downloading images...'),
+                            backgroundColor: Color(0xFF0E4F55),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.download_rounded),
+                      label: const Text('Download All'),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

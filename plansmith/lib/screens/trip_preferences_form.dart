@@ -20,6 +20,8 @@ class _TripPreferencesFormState extends State<TripPreferencesForm> {
   int _currentPage = 0;
 
   // Form data
+  String _destination = '';
+  String _destinationCountry = '';
   String _selectedAge = '25-35';
   List<String> _selectedThemes = ['Heritage', 'Adventure']; // Default themes
   String _budgetLevel = 'mid_range';
@@ -207,6 +209,86 @@ class _TripPreferencesFormState extends State<TripPreferencesForm> {
             style: AppStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
           ),
           const SizedBox(height: AppStyles.spacing32),
+          
+          // Destination
+          Text(
+            'Destination',
+            style: AppStyles.labelLarge.copyWith(color: AppColors.textPrimary),
+          ),
+          const SizedBox(height: AppStyles.spacing12),
+          Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'City (e.g., Paris)',
+                    hintStyle: AppStyles.bodyMedium.copyWith(color: AppColors.textTertiary),
+                    filled: true,
+                    fillColor: AppColors.grey100,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.border),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.border),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.primary, width: 2),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: AppStyles.spacing16,
+                      vertical: AppStyles.spacing12,
+                    ),
+                  ),
+                  style: AppStyles.bodyMedium,
+                  onChanged: (value) {
+                    setState(() {
+                      _destination = value;
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(width: AppStyles.spacing12),
+              Expanded(
+                flex: 2,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Country (e.g., France)',
+                    hintStyle: AppStyles.bodyMedium.copyWith(color: AppColors.textTertiary),
+                    filled: true,
+                    fillColor: AppColors.grey100,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.border),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.border),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(AppStyles.radius12),
+                      borderSide: const BorderSide(color: AppColors.primary, width: 2),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: AppStyles.spacing16,
+                      vertical: AppStyles.spacing12,
+                    ),
+                  ),
+                  style: AppStyles.bodyMedium,
+                  onChanged: (value) {
+                    setState(() {
+                      _destinationCountry = value;
+                    });
+                  },
+                ),
+              ),
+            ],
+          ),
+          
+          const SizedBox(height: AppStyles.spacing24),
           
           // Age Group
           Text(
@@ -641,14 +723,30 @@ class _TripPreferencesFormState extends State<TripPreferencesForm> {
   void _submitForm() {
     // Debug: Print current form state
     print('Submitting form with data:');
+    print('Destination: $_destination, $_destinationCountry');
     print('Age: $_selectedAge');
     print('Themes: $_selectedThemes');
     print('Budget Level: $_budgetLevel');
     print('Budget Amount: $_budgetAmount');
     print('Travelers: $_travelersCount');
     
+    // Validate destination
+    if (_destination.isEmpty || _destinationCountry.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please enter both city and country for your destination'),
+          backgroundColor: AppColors.error,
+        ),
+      );
+      return;
+    }
+    
     // Always submit for now (since we don't have complex validation)
     final preferences = {
+      'destination': {
+        'city': _destination,
+        'country': _destinationCountry,
+      },
       'age_group': _selectedAge,
       'themes': _selectedThemes,
       'interests': _selectedInterests,

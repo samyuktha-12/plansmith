@@ -1,0 +1,23 @@
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Core dependencies
+firebase-admin==6.4.0
+google-generativeai>=0.3.0
+requests==2.31.0
+Pillow==10.1.0
+
+# Google Cloud dependencies
+google-cloud-firestore>=2.13.0
+google-cloud-storage>=2.10.0
+googlemaps>=4.10.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Development dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0

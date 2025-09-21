@@ -799,7 +799,7 @@ class _TripMapScreenState extends State<TripMapScreen> with TickerProviderStateM
               ),
               if (activity['cost'] > 0)
                 Text(
-                  '\$${activity['cost']}',
+                  '₹${activity['cost']}',
                   style: TextStyle(
                     fontFamily: 'Quicksand',
                     fontSize: 12,

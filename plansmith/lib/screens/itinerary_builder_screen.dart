@@ -3,6 +3,7 @@ import '../constants/app_colors.dart';
 import '../constants/app_styles.dart';
 import '../models/mock_data.dart';
 import '../widgets/swipeable_card.dart';
+import '../services/api_service.dart';
 
 class ItineraryBuilderScreen extends StatefulWidget {
   final Map<String, dynamic> userPreferences;
@@ -27,11 +28,16 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
   List<Map<String, dynamic>> selectedFlights = [];
   List<Map<String, dynamic>> selectedRestaurants = [];
   
-  // Mock data
+  // Data from API
   List<Map<String, dynamic>> activities = [];
   List<Map<String, dynamic>> accommodations = [];
   List<Map<String, dynamic>> flights = [];
   List<Map<String, dynamic>> restaurants = [];
+  
+  // Loading states
+  bool _isLoading = true;
+  String _loadingMessage = 'Loading your personalized recommendations...';
+  bool _useApiData = true; // Toggle between API and mock data
 
   @override
   void initState() {
@@ -39,7 +45,77 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
     print('ItineraryBuilderScreen initState called');
     print('User preferences received: ${widget.userPreferences}');
     _tabController = TabController(length: 4, vsync: this);
-    _loadMockData();
+    _loadData();
+  }
+
+  void _loadData() async {
+    print('Loading data with preferences: ${widget.userPreferences}');
+    
+    if (_useApiData) {
+      await _loadApiData();
+    } else {
+      _loadMockData();
+    }
+  }
+
+  Future<void> _loadApiData() async {
+    try {
+      setState(() {
+        _isLoading = true;
+        _loadingMessage = 'Connecting to AI trip planner...';
+      });
+
+      // Check if backend is available
+      final isHealthy = await ApiService.checkHealth();
+      if (!isHealthy) {
+        print('Backend not available, falling back to mock data');
+        setState(() {
+          _loadingMessage = 'Backend unavailable, using sample data...';
+        });
+        await Future.delayed(const Duration(seconds: 1));
+        _loadMockData();
+        return;
+      }
+
+      setState(() {
+        _loadingMessage = 'Generating personalized activities...';
+      });
+
+      // Load data from API
+      final activitiesData = await ApiService.getActivities(widget.userPreferences);
+      setState(() {
+        _loadingMessage = 'Finding perfect accommodations...';
+      });
+
+      final accommodationsData = await ApiService.getAccommodations(widget.userPreferences);
+      setState(() {
+        _loadingMessage = 'Searching for flights...';
+      });
+
+      final flightsData = await ApiService.getFlights(widget.userPreferences);
+      setState(() {
+        _loadingMessage = 'Discovering local restaurants...';
+      });
+
+      final restaurantsData = await ApiService.getRestaurants(widget.userPreferences);
+
+      setState(() {
+        activities = activitiesData;
+        accommodations = accommodationsData;
+        flights = flightsData;
+        restaurants = restaurantsData;
+        _isLoading = false;
+      });
+      
+      print('Loaded from API - Activities: ${activities.length}, Accommodations: ${accommodations.length}, Flights: ${flights.length}, Restaurants: ${restaurants.length}');
+    } catch (e) {
+      print('Error loading API data: $e');
+      setState(() {
+        _loadingMessage = 'Error loading data, using sample data...';
+      });
+      await Future.delayed(const Duration(seconds: 1));
+      _loadMockData();
+    }
   }
 
   void _loadMockData() {
@@ -50,14 +126,15 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
         accommodations = MockData.getAccommodations(widget.userPreferences);
         flights = MockData.getFlights(widget.userPreferences);
         restaurants = MockData.getRestaurants(widget.userPreferences);
+        _isLoading = false;
       });
       
-      print('Loaded activities: ${activities.length}');
-      print('Loaded accommodations: ${accommodations.length}');
-      print('Loaded flights: ${flights.length}');
-      print('Loaded restaurants: ${restaurants.length}');
+      print('Loaded mock data - Activities: ${activities.length}, Accommodations: ${accommodations.length}, Flights: ${flights.length}, Restaurants: ${restaurants.length}');
     } catch (e) {
       print('Error loading mock data: $e');
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
@@ -66,6 +143,10 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
     print('=== ItineraryBuilderScreen build method called ===');
     print('Current context: $context');
     print('Widget mounted: $mounted');
+    
+    if (_isLoading) {
+      return _buildLoadingScreen();
+    }
     
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -143,6 +224,120 @@ class _ItineraryBuilderScreenState extends State<ItineraryBuilderScreen> with Ti
         onPressed: _viewItinerary,
         backgroundColor: AppColors.primary,
         child: const Icon(Icons.check, color: AppColors.white),
+      ),
+    );
+  }
+
+  Widget _buildLoadingScreen() {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      appBar: AppBar(
+        backgroundColor: AppColors.surface,
+        elevation: 0,
+        title: Text(
+          'Building Your Trip',
+          style: AppStyles.heading3.copyWith(color: AppColors.primary),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: AppColors.primary),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Animated loading indicator
+            Container(
+              width: 120,
+              height: 120,
+              decoration: BoxDecoration(
+                gradient: AppGradients.primaryGradient,
+                borderRadius: BorderRadius.circular(60),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withOpacity(0.3),
+                    blurRadius: 20,
+                    offset: const Offset(0, 8),
+                  ),
+                ],
+              ),
+              child: const Center(
+                child: CircularProgressIndicator(
+                  color: AppColors.white,
+                  strokeWidth: 3,
+                ),
+              ),
+            ),
+            
+            const SizedBox(height: 32),
+            
+            // Loading message
+            Text(
+              _loadingMessage,
+              style: AppStyles.heading3.copyWith(
+                color: AppColors.textPrimary,
+                fontWeight: FontWeight.w600,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            
+            const SizedBox(height: 16),
+            
+            // Destination info
+            if (widget.userPreferences['destination'] != null) ...[
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: AppColors.primary.withOpacity(0.2),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.location_on,
+                      color: AppColors.primary,
+                      size: 20,
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      '${widget.userPreferences['destination']['city']}, ${widget.userPreferences['destination']['country']}',
+                      style: AppStyles.labelLarge.copyWith(
+                        color: AppColors.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            
+            const SizedBox(height: 32),
+            
+            // Fallback option
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  _useApiData = false;
+                  _isLoading = true;
+                });
+                _loadData();
+              },
+              child: Text(
+                'Use Sample Data Instead',
+                style: AppStyles.labelMedium.copyWith(
+                  color: AppColors.textSecondary,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
