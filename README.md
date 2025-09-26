@@ -141,13 +141,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Group trip management
 - [x] Mobile app (iOS/Android)
 
-### Phase 2 (Q2 2024)
+### Phase 2 (Q2 2025)
 - [ ] Advanced AI features
 - [ ] Real-time collaboration
 - [ ] Payment integration
 - [ ] Web dashboard
 
-### Phase 3 (Q3 2024)
+### Phase 3 (Q3 2025)
 - [ ] Social features
 - [ ] Travel marketplace
 - [ ] Advanced analytics
@@ -157,5 +157,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
   <p>Made with ❤️ by the PlanSmith Team</p>
-  <p>© 2024 PlanSmith. All rights reserved.</p>
+  <p>© 2025 PlanSmith. All rights reserved.</p>
 </div>
